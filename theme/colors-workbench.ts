@@ -43,8 +43,6 @@ const BLUE_250 = '#415e6c'
 
 // --- Backgrounds
 
-const ULTRA_BACKGROUND = Colors.schemes[THEME].background
-const DARK_BACKGROUND = Colors.schemes[THEME].background
 const PRIMARY_BACKGROUND = Colors.schemes[THEME].surface
 const LIGHT_BACKGROUND = Colors.schemes[THEME].surfaceBright
 const ANOTHER_BACKGROUND = Colors.schemes[THEME].surfaceDim
@@ -58,13 +56,7 @@ const INLAYS = Colors.schemes[THEME].surfaceVariant
 
 // --- Borders
 
-const BORDERS = {
-  100: '#ffffff',
-  200: '#ffffff',
-  300: '#ffffff',
-  400: '#ffffff',
-  500: '#ffffff',
-}
+const BORDERS = Colors.schemes[THEME].surface
 
 // --- Highlighting
 
@@ -187,7 +179,7 @@ const dropdown = {
   'dropdown.background': ANOTHER_BACKGROUND,
   'dropdown.listBackground': BACKGROUND_WIDGET,
   'dropdown.foreground': BLUE_175,
-  'dropdown.border': BORDERS[200],
+  'dropdown.border': BORDERS,
 }
 
 //
@@ -240,7 +232,7 @@ const listsTrees = {
   // this really only applies to file explorer view, where having the last file
   // that was selected have a background is distracting, especially if you don't
   // have VSCode focus the file you're viewing when you change files)
-  'list.inactiveSelectionBackground': DARK_BACKGROUND,
+  'list.inactiveSelectionBackground': PRIMARY_BACKGROUND,
   'list.inactiveSelectionForeground': SECONDARY,
   // Focused item when the list container is NOT in focus
   'list.inactiveFocusBackground': null, // unknown
@@ -253,7 +245,7 @@ const listsTrees = {
   'list.invalidItemForeground': null,
 
   // Vertical lines in tree view shown for open directories
-  'tree.indentGuidesStroke': BORDERS[200],
+  'tree.indentGuidesStroke': BORDERS,
 }
 
 //
@@ -262,11 +254,11 @@ const listsTrees = {
 
 const input = {
   'input.background': LIGHT_BACKGROUND,
-  'input.border': BORDERS[200],
+  'input.border': BORDERS,
   'input.foreground': BLUE_200,
   'input.placeholderForeground': BLUE_200,
   // The controls inside of the input for setting search constraints
-  'inputOption.activeBorder': BORDERS[400],
+  'inputOption.activeBorder': BORDERS,
   'inputOption.activeBackground': alpha(PRIMARY, 0.15),
   'inputValidation.errorBackground': ERROR,
   'inputValidation.errorBorder': ERROR,
@@ -284,7 +276,7 @@ const input = {
 // represented by a tab
 const editorGroup = {
   // Border applies to multiple editor groups
-  'editorGroup.border': BORDERS[200],
+  'editorGroup.border': BORDERS,
   'editorGroup.dropBackground': BACKGROUND_DRAG_DROP,
   // When all tabs are closed the editorGroup is empty, you would see this on
   // opening VSCode without a previous project, eg cmd+shift+n
@@ -293,20 +285,20 @@ const editorGroup = {
   // If you're not using tabs, show regular background, can't think of a better
   // color for that display
   'editorGroupHeader.noTabsBackground': null,
-  'editorGroupHeader.tabsBackground': DARK_BACKGROUND,
-  'editorGroupHeader.tabsBorder': BORDERS[200],
-  'editorGroupHeader.border': BORDERS[100],
+  'editorGroupHeader.tabsBackground': PRIMARY_BACKGROUND,
+  'editorGroupHeader.tabsBorder': BORDERS,
+  'editorGroupHeader.border': BORDERS,
 }
 
 // Editor tabs
 const tab = {
   // Border is *between* tabs, set to background so there isn't a border
-  'tab.border': DARK_BACKGROUND,
+  'tab.border': PRIMARY_BACKGROUND,
   'tab.activeBorder': TRANSPARENT,
-  'tab.activeBorderTop': BORDERS[500],
-  'tab.activeBackground': DARK_BACKGROUND,
+  'tab.activeBorderTop': BORDERS,
+  'tab.activeBackground': PRIMARY_BACKGROUND,
   'tab.activeForeground': BLUE_125,
-  'tab.inactiveBackground': DARK_BACKGROUND,
+  'tab.inactiveBackground': PRIMARY_BACKGROUND,
   'tab.inactiveForeground': BLUE_175,
   // --- Hover
   'tab.hoverBackground': null,
@@ -465,7 +457,7 @@ const editor = {
 // Overview ruler - located beneath scroll bar on right edge of editor and contains an
 // overview of all editor decorations
 const editorOverviewRuler = {
-  'editorOverviewRuler.border': BORDERS[200],
+  'editorOverviewRuler.border': BORDERS,
   'editorOverviewRuler.findMatchForeground': null,
   'editorOverviewRuler.rangeHighlightForeground': null,
   'editorOverviewRuler.selectionHighlightForeground': null,
@@ -505,7 +497,7 @@ const editorWidget = {
 
 // Minimap
 const minimap = {
-  // 'minimap.background': DARK_BACKGROUND,
+  // 'minimap.background': PRIMARY_BACKGROUND,
   'minimap.findMatchHighlight': alpha(HIGHLIGHT_MATCH, 0.75),
   'minimapGutter.addedBackground': GIT_ADDED,
   'minimapGutter.modifiedBackground': GIT_MODIFIED,
@@ -518,11 +510,11 @@ const minimap = {
 
 const peekView = {
   'peekView.border': Colors.schemes[THEME].onPrimary,
-  'peekViewEditor.background': DARK_BACKGROUND,
-  'peekViewEditorGutter.background': DARK_BACKGROUND,
+  'peekViewEditor.background': PRIMARY_BACKGROUND,
+  'peekViewEditorGutter.background': PRIMARY_BACKGROUND,
   'peekViewEditor.matchHighlightBackground': alpha(Colors.schemes[THEME].onPrimary, 0.15),
   'peekViewEditor.matchHighlightBorder': '#0000',
-  'peekViewResult.background': DARK_BACKGROUND,
+  'peekViewResult.background': PRIMARY_BACKGROUND,
   'peekViewResult.fileForeground': BLUE_200,
   'peekViewResult.lineForeground': BLUE_200,
 
@@ -534,7 +526,7 @@ const peekView = {
   'peekViewResult.selectionBackground': alpha(HIGHLIGHT_RANGE, 0.1),
   'peekViewResult.selectionForeground': SECONDARY,
 
-  'peekViewTitle.background': DARK_BACKGROUND,
+  'peekViewTitle.background': PRIMARY_BACKGROUND,
   'peekViewTitleLabel.foreground': SECONDARY,
   'peekViewTitleDescription.foreground': BLUE_200,
 }
@@ -544,9 +536,9 @@ const peekView = {
 //
 
 const activityBar = {
-  'activityBar.background': ULTRA_BACKGROUND,
+  'activityBar.background': PRIMARY_BACKGROUND,
   'activityBar.dropBackground': BACKGROUND_DRAG_DROP,
-  'activityBar.border': BORDERS[400],
+  'activityBar.border': BORDERS,
   'activityBar.foreground': Colors.schemes[THEME].onPrimary,
   'activityBar.inactiveForeground': alpha(Colors.schemes[THEME].onPrimary, 0.6),
   'activityBar.activeBorder': Colors.schemes[THEME].onPrimary,
@@ -563,7 +555,7 @@ const activityBar = {
 // Integrated Terminal.
 const panel = {
   'panel.background': PRIMARY_BACKGROUND,
-  'panel.border': BORDERS[200],
+  'panel.border': BORDERS,
   'panel.dropBackground': BACKGROUND_DRAG_DROP,
   // Panel title
   'panelTitle.activeBorder': PRIMARY,
@@ -577,14 +569,14 @@ const panel = {
 
 // Contains the Explore/Debug/Extension/etc. views
 const sideBar = {
-  'sideBar.background': DARK_BACKGROUND,
+  'sideBar.background': PRIMARY_BACKGROUND,
   'sideBar.foreground': BLUE_175,
-  'sideBar.border': BORDERS[300],
+  'sideBar.border': BORDERS,
   'sideBar.dropBackground': BACKGROUND_DRAG_DROP,
   // The title for the entire side bar, eg 'EXPLORER' or 'DEBUG'
   'sideBarTitle.foreground': BLUE_200,
   // Side bar sections for features
-  'sideBarSectionHeader.background': DARK_BACKGROUND, // same bg for subtler headers
+  'sideBarSectionHeader.background': PRIMARY_BACKGROUND, // same bg for subtler headers
   'sideBarSectionHeader.foreground': BLUE_200,
   'sideBarSectionHeader.border': TRANSPARENT, // ?? Maybe add a color here ??
 }
@@ -595,11 +587,11 @@ const sideBar = {
 
 // Bar at bottom of application with current statuses and info
 const statusBar = {
-  'statusBar.background': DARK_BACKGROUND,
+  'statusBar.background': PRIMARY_BACKGROUND,
   'statusBar.foreground': BLUE_200,
-  'statusBar.border': BORDERS[200],
+  'statusBar.border': BORDERS,
   // DEBUGGING MODE
-  'statusBar.debuggingBackground': DARK_BACKGROUND,
+  'statusBar.debuggingBackground': PRIMARY_BACKGROUND,
   'statusBar.debuggingForeground': SECONDARY,
   'statusBar.debuggingBorder': PRIMARY,
   // NO FOLDER MODE
@@ -621,7 +613,7 @@ const statusBar = {
 const titleBar = {
   'titleBar.activeBackground': Colors.schemes[THEME].primary,
   'titleBar.activeForeground': Colors.schemes[THEME].onPrimary,
-  'titleBar.border': BORDERS[400],
+  'titleBar.border': BORDERS,
   // Title bar is slightly darkened on blur by default and looks good
   'titleBar.inactiveBackground': null,
   'titleBar.inactiveForeground': null,
@@ -657,7 +649,7 @@ const extension = {
 //
 
 const quickInput = {
-  'pickerGroup.border': BORDERS[400],
+  'pickerGroup.border': BORDERS,
   'pickerGroup.foreground': SECONDARY,
   // Add a fun widget background style to the quick input which opens on go to
   // file, go to symbol, etc.
@@ -691,7 +683,7 @@ const diffEditor = {
   'diffEditor.insertedTextBorder': null, // ETOOMUCHBORDER
   'diffEditor.removedTextBackground': alpha(DIFF_REMOVED, 0.09),
   'diffEditor.removedTextBorder': null, // ETOOMUCHBORDER
-  'diffEditor.border': BORDERS[200],
+  'diffEditor.border': BORDERS,
 }
 
 //
@@ -703,7 +695,7 @@ const mergeConflicts = {
   'merge.currentContentBackground': alpha(MERGE_CURRENT, 0.075),
   'merge.incomingHeaderBackground': alpha(MERGE_INCOMING, 0.2),
   'merge.incomingContentBackground': alpha(MERGE_INCOMING, 0.075),
-  'merge.border': BORDERS[200],
+  'merge.border': BORDERS,
   'merge.commonContentBackground': alpha(MERGE_COMMON, 0.075),
   'merge.commonHeaderBackground': alpha(MERGE_COMMON, 0.2),
   'editorOverviewRuler.currentContentForeground': alpha(MERGE_CURRENT, 0.3),
@@ -749,7 +741,7 @@ const welcomePage = {
 // By default breadcrumbs look good, they have the foreground gray with the
 // alpha mito purple and primary accent colors
 const breadcrumbs = {
-  'breadcrumb.background': DARK_BACKGROUND,
+  'breadcrumb.background': PRIMARY_BACKGROUND,
   'breadcrumb.foreground': BLUE_250,
   // When a breadcrumb is hovered or focused with 'Focus breadcrumbs' command,
   // this will apply
@@ -768,7 +760,7 @@ const terminal = {
   'terminal.background': PRIMARY_BACKGROUND,
   'terminal.foreground': '#A8D2D4',
   // Border between multiple terminals
-  'terminal.border': BORDERS[200],
+  'terminal.border': BORDERS,
 
   'terminal.selectionBackground': '#874df84d',
 
