@@ -28,19 +28,6 @@ const SECONDARY = Colors.schemes[THEME].secondary
 const PRIMARY_HOVER = Colors.schemes[THEME].primaryFixedDim
 const SECONDARY_HOVER = Colors.schemes[THEME].secondaryFixedDim
 
-// --- Grays
-
-const GRAY_100 = Colors.palettes.neutral[100]
-
-// --- Blues
-
-const BLUE_50 = '#EAFEFA'
-const BLUE_100 = '#d0fff4'
-const BLUE_125 = '#c9fdf1'
-const BLUE_175 = '#90b0b3'
-const BLUE_200 = '#7c9c9e'
-const BLUE_250 = '#415e6c'
-
 // --- Backgrounds
 
 const PRIMARY_BACKGROUND = Colors.schemes[THEME].surface
@@ -56,7 +43,7 @@ const INLAYS = Colors.schemes[THEME].surfaceVariant
 
 // --- Borders
 
-const BORDERS = Colors.schemes[THEME].surface
+const BORDERS = '#0000'
 
 // --- Highlighting
 
@@ -97,18 +84,6 @@ const TRANSPARENT = '#0000'
 // Shadows are show by items that are scrolled and under widgets
 const SHADOW = alpha(PRIMARY, 0.5)
 
-// VSCode Radical theme 🎉
-// ---------------------------------------------------------------------------
-
-/**
- * ℹ️ Editor hieararchy
- * - Elevations set editor heiararchy with 3 progressively lighter colors for
- *   different sections:
- *    1. ULTRA - Darkest background for the title bar and activity bar
- *    2. DARK - Middle background for sidebar, tabs/breadcrumbs and status bar
- *    3. PRIMARY - Lightest background for the editor and panel
- */
-
 //
 // High contrast
 //
@@ -125,8 +100,7 @@ const contrast = {
 
 const base = {
   focusBorder: TRANSPARENT, // Default to not showing focus borders
-  foreground: BLUE_200,
-  'widget.shadow': SHADOW,
+  foreground: Colors.schemes[THEME].tertiary,
   // Background for text selection inside of inputs and textareas
   // (Type into the find input and then select some text)
   'selection.background': alpha(Colors.schemes[THEME].primary, 0.1),
@@ -142,7 +116,7 @@ const base = {
 
 const text = {
   'textBlockQuote.background': Colors.schemes[THEME].surfaceDim,
-  'textBlockQuote.border': BLUE_200,
+  'textBlockQuote.border': Colors.schemes[THEME].surfaceDim,
   // Only showing inside of hover widget for code snippets (eg hover over chroma.hex())
   // It would be awesome if this showed inside READMEs code blocks...
   'textCodeBlock.background': Colors.schemes[THEME].surfaceDim,
@@ -178,7 +152,7 @@ const button = {
 const dropdown = {
   'dropdown.background': ANOTHER_BACKGROUND,
   'dropdown.listBackground': BACKGROUND_WIDGET,
-  'dropdown.foreground': BLUE_175,
+  'dropdown.foreground': Colors.schemes[THEME].onSurface,
   'dropdown.border': BORDERS,
 }
 
@@ -219,27 +193,27 @@ const progressBar = {
 const listsTrees = {
   // Mouse hover
   'list.hoverBackground': alpha(PRIMARY, 0.05),
-  'list.hoverForeground': BLUE_200,
+  'list.hoverForeground': Colors.schemes[THEME].onPrimary,
   // Keyboard focus - using slightly higher alpha to make selection more obvious,
   // this helps UX for things like project and command dropdown selection with
   // the keyboard
   'list.focusBackground': alpha(PRIMARY, 0.2),
-  'list.focusForeground': SECONDARY,
+  'list.focusForeground': Colors.schemes[THEME].onPrimary,
   // Selected item when the list container is in focus
   'list.activeSelectionBackground': alpha(PRIMARY, 0.1),
-  'list.activeSelectionForeground': SECONDARY,
+  'list.activeSelectionForeground': Colors.schemes[THEME].onPrimary,
   // Selected item when the list container is NOT in focus. (Currently assuming
   // this really only applies to file explorer view, where having the last file
   // that was selected have a background is distracting, especially if you don't
   // have VSCode focus the file you're viewing when you change files)
   'list.inactiveSelectionBackground': PRIMARY_BACKGROUND,
-  'list.inactiveSelectionForeground': SECONDARY,
+  'list.inactiveSelectionForeground': Colors.schemes[THEME].onPrimary,
   // Focused item when the list container is NOT in focus
   'list.inactiveFocusBackground': null, // unknown
   // Drag and drop background, shows when you hover a drag item over a droppable area
   'list.dropBackground': BACKGROUND_DRAG_DROP,
   // The text that matches a search term inside of lists
-  'list.highlightForeground': SECONDARY,
+  'list.highlightForeground': Colors.schemes[THEME].onPrimary,
   'list.errorForeground': ERROR,
   'list.warningForeground': WARNING,
   'list.invalidItemForeground': null,
@@ -255,8 +229,8 @@ const listsTrees = {
 const input = {
   'input.background': LIGHT_BACKGROUND,
   'input.border': BORDERS,
-  'input.foreground': BLUE_200,
-  'input.placeholderForeground': BLUE_200,
+  'input.foreground': Colors.schemes[THEME].onSurface,
+  'input.placeholderForeground': Colors.schemes[THEME].onSurface,
   // The controls inside of the input for setting search constraints
   'inputOption.activeBorder': BORDERS,
   'inputOption.activeBackground': alpha(PRIMARY, 0.15),
@@ -297,12 +271,12 @@ const tab = {
   'tab.activeBorder': TRANSPARENT,
   'tab.activeBorderTop': BORDERS,
   'tab.activeBackground': PRIMARY_BACKGROUND,
-  'tab.activeForeground': BLUE_125,
+  'tab.activeForeground': Colors.schemes[THEME].onSurface,
   'tab.inactiveBackground': PRIMARY_BACKGROUND,
-  'tab.inactiveForeground': BLUE_175,
+  'tab.inactiveForeground': Colors.schemes[THEME].onSurface,
   // --- Hover
   'tab.hoverBackground': null,
-  'tab.hoverBorder': BLUE_250,
+  'tab.hoverBorder': Colors.schemes[THEME].onSurface,
   // --- Unfocused editor group tabs
   // default styles slightly darken tab colors and look good 👍
   'tab.unfocusedActiveBorder': null,
@@ -317,11 +291,11 @@ const editor = {
   'editor.background': PRIMARY_BACKGROUND,
   // The editor default foreground shows up in widgets, is the color of the
   // separators in merge conflicts
-  'editor.foreground': GRAY_100,
+  'editor.foreground': Colors.schemes[THEME].onPrimary,
 
   // --- Line number colors
-  'editorLineNumber.foreground': BLUE_250,
-  'editorLineNumber.activeForeground': BLUE_100,
+  'editorLineNumber.foreground': Colors.schemes[THEME].onSurface,
+  'editorLineNumber.activeForeground': Colors.schemes[THEME].onSurface,
 
   // Editor highlighting (#highlighting)
   // ------------------------------------
@@ -477,7 +451,7 @@ const editorOverviewRuler = {
 // Editor widgets
 const editorWidget = {
   'editorWidget.background': BACKGROUND_WIDGET,
-  'editorWidget.border': BLUE_200,
+  'editorWidget.border': Colors.schemes[THEME].onSurface,
   'editorWidget.resizeBorder': PRIMARY_HOVER,
   // Suggest widget falls back to editor widget values which look good.
   'editorSuggestWidget.background': null,
@@ -515,8 +489,8 @@ const peekView = {
   'peekViewEditor.matchHighlightBackground': alpha(Colors.schemes[THEME].onPrimary, 0.15),
   'peekViewEditor.matchHighlightBorder': '#0000',
   'peekViewResult.background': PRIMARY_BACKGROUND,
-  'peekViewResult.fileForeground': BLUE_200,
-  'peekViewResult.lineForeground': BLUE_200,
+  'peekViewResult.fileForeground': Colors.schemes[THEME].onSurface,
+  'peekViewResult.lineForeground': Colors.schemes[THEME].onSurface,
 
   // The background of all matches in the peek sidebar
   'peekViewResult.matchHighlightBackground': alpha(HIGHLIGHT_RANGE, 0.2),
@@ -528,7 +502,7 @@ const peekView = {
 
   'peekViewTitle.background': PRIMARY_BACKGROUND,
   'peekViewTitleLabel.foreground': SECONDARY,
-  'peekViewTitleDescription.foreground': BLUE_200,
+  'peekViewTitleDescription.foreground': Colors.schemes[THEME].onSurface,
 }
 
 //
@@ -559,8 +533,8 @@ const panel = {
   'panel.dropBackground': BACKGROUND_DRAG_DROP,
   // Panel title
   'panelTitle.activeBorder': PRIMARY,
-  'panelTitle.activeForeground': BLUE_200,
-  'panelTitle.inactiveForeground': BLUE_200,
+  'panelTitle.activeForeground': Colors.schemes[THEME].onSurface,
+  'panelTitle.inactiveForeground': Colors.schemes[THEME].onSurface,
 }
 
 //
@@ -570,14 +544,14 @@ const panel = {
 // Contains the Explore/Debug/Extension/etc. views
 const sideBar = {
   'sideBar.background': PRIMARY_BACKGROUND,
-  'sideBar.foreground': BLUE_175,
+  'sideBar.foreground': Colors.schemes[THEME].onSurface,
   'sideBar.border': BORDERS,
   'sideBar.dropBackground': BACKGROUND_DRAG_DROP,
   // The title for the entire side bar, eg 'EXPLORER' or 'DEBUG'
-  'sideBarTitle.foreground': BLUE_200,
+  'sideBarTitle.foreground': Colors.schemes[THEME].onSurface,
   // Side bar sections for features
   'sideBarSectionHeader.background': PRIMARY_BACKGROUND, // same bg for subtler headers
-  'sideBarSectionHeader.foreground': BLUE_200,
+  'sideBarSectionHeader.foreground': Colors.schemes[THEME].onSurface,
   'sideBarSectionHeader.border': TRANSPARENT, // ?? Maybe add a color here ??
 }
 
@@ -588,7 +562,7 @@ const sideBar = {
 // Bar at bottom of application with current statuses and info
 const statusBar = {
   'statusBar.background': PRIMARY_BACKGROUND,
-  'statusBar.foreground': BLUE_200,
+  'statusBar.foreground': Colors.schemes[THEME].onSurface,
   'statusBar.border': BORDERS,
   // DEBUGGING MODE
   'statusBar.debuggingBackground': PRIMARY_BACKGROUND,
@@ -596,7 +570,7 @@ const statusBar = {
   'statusBar.debuggingBorder': PRIMARY,
   // NO FOLDER MODE
   'statusBar.noFolderBackground': Colors.schemes[THEME].surfaceBright,
-  'statusBar.noFolderForeground': BLUE_200,
+  'statusBar.noFolderForeground': Colors.schemes[THEME].onSurface,
   'statusBar.noFolderBorder': Colors.schemes[THEME].onPrimary,
   // ℹ️ You can only style the background of status bar items
   'statusBarItem.prominentBackground': Colors.schemes[THEME].onPrimary,
@@ -654,7 +628,7 @@ const quickInput = {
   // Add a fun widget background style to the quick input which opens on go to
   // file, go to symbol, etc.
   'quickInput.background': BACKGROUND_WIDGET,
-  'quickInput.foreground': BLUE_175,
+  'quickInput.foreground': Colors.schemes[THEME].onSurface,
   // 'quickInputTitle.background' ???
   'quickInput.list.focusBackground': alpha(PRIMARY, 0.2),
 }
@@ -731,7 +705,7 @@ const debug = {
 const welcomePage = {
   'welcomePage.buttonBackground': Colors.schemes[THEME].surfaceBright,
   'welcomePage.buttonHoverBackground': Colors.schemes[THEME].surfaceDim,
-  'walkThrough.embeddedEditorBackground': '#1e2732',
+  'walkThrough.embeddedEditorBackground': Colors.schemes[THEME].surface,
 }
 
 //
@@ -742,7 +716,7 @@ const welcomePage = {
 // alpha mito purple and primary accent colors
 const breadcrumbs = {
   'breadcrumb.background': PRIMARY_BACKGROUND,
-  'breadcrumb.foreground': BLUE_250,
+  'breadcrumb.foreground': Colors.schemes[THEME].tertiary,
   // When a breadcrumb is hovered or focused with 'Focus breadcrumbs' command,
   // this will apply
   'breadcrumb.focusForeground': SECONDARY,
