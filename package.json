@@ -1,20 +1,20 @@
 {
-  "name": "radical-vscode",
-  "displayName": "Radical",
-  "description": "A dark theme for radical hacking inspired by retro futuristic design",
-  "version": "3.3.1",
-  "publisher": "dhedgecock",
+  "name": "switcher-theme-vscode",
+  "displayName": "Switcher Theme",
+  "description": "A dark theme for Switcher Development",
+  "version": "0.0.1",
+  "publisher": "isfopo",
   "license": "ISC",
   "engines": {
     "vscode": "^1.40.0",
     "node": "16 || 18"
   },
   "bugs": {
-    "url": "https://github.com/dhedgecock/radical-vscode/issues"
+    "url": "https://github.com/isfopo/switcher-dark-theme/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dhedgecock/radical-vscode"
+    "url": "https://github.com/isfopo/switcher-dark-theme"
   },
   "icon": "assets/icon.png",
   "galleryBanner": {
@@ -27,9 +27,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "Radical",
+        "label": "Switcher",
         "uiTheme": "vs-dark",
-        "path": "./dist/Radical.json"
+        "path": "./dist/Switcher.json"
       }
     ]
   },
