@@ -1,4 +1,4 @@
-import colors, { LAVENDERS, PINKS } from './colors'
+import { Colors, THEME } from './colors'
 import { token } from './utils'
 
 // The generic syntax tokens are themed here according to the Textmate naming
@@ -11,22 +11,22 @@ import { token } from './utils'
 
 export const tokenColors = [
   // ℹ️ No color for generic <meta>, see naming conventions for details
-  token('comment', colors.comment, 'italic'),
+  token('comment', Colors.schemes[THEME].onSurface, 'italic'),
   // Booleans are constants (Uppercase "constants" are actually variables)
-  token('constant', colors.constant),
+  token('constant', Colors.schemes[THEME].onSurface),
   // Entities end up being a lot of things, most noticably class names, method names
-  token('entity', colors.entity),
-  token('invalid', colors.invalid, 'italic bold underline'),
+  token('entity', Colors.schemes[THEME].onSurface),
+  token('invalid', Colors.schemes[THEME].onSurface, 'italic bold underline'),
   // Language keywords like `export` or `return`
-  token('keyword', colors.keyword),
+  token('keyword', Colors.schemes[THEME].onSurface),
   // Generic for markup content
-  token('markup', colors.markup),
+  token('markup', Colors.schemes[THEME].onSurface),
   // Includes variable declarations
-  token('storage', colors.storage),
-  token('string', colors.string),
+  token('storage', Colors.schemes[THEME].onSurface),
+  token('string', Colors.schemes[THEME].onSurface),
   // Support is meant to be things provided by external frameworks or libraries
-  token('support', colors.support),
-  token('variable', colors.variable),
+  token('support', Colors.schemes[THEME].onSurface),
+  token('variable', Colors.schemes[THEME].onSurface),
 
   // --- TYPES
   {
@@ -34,7 +34,7 @@ export const tokenColors = [
     scope: 'support.type',
     settings: {
       fontStyle: 'italic',
-      foreground: LAVENDERS[200],
+      foreground: Colors.schemes[THEME].onSurface,
     },
   },
   {
@@ -42,21 +42,21 @@ export const tokenColors = [
     scope: 'keyword.control.as',
     settings: {
       fontStyle: 'bold underline',
-      foreground: PINKS[600],
+      foreground: Colors.schemes[THEME].onSurface,
     },
   },
   {
     // TS function assertions
     scope: 'keyword.operator.type.asserts, keyword.operator.expression.is',
     settings: {
-      foreground: PINKS[500],
+      foreground: Colors.schemes[THEME].onSurface,
     },
   },
   {
     // Named types - covers type aliases, interfaces, and parameters
     scope: 'entity.name.type',
     settings: {
-      foreground: LAVENDERS[500],
+      foreground: Colors.schemes[THEME].onSurface,
       fontStyle: 'italic',
     },
   },

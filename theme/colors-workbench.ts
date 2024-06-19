@@ -28,14 +28,9 @@ const SECONDARY = Colors.schemes[THEME].secondary
 const PRIMARY_HOVER = Colors.schemes[THEME].primaryFixedDim
 const SECONDARY_HOVER = Colors.schemes[THEME].secondaryFixedDim
 
-const ULTRA = '#f52277'
-
 // --- Grays
 
 const GRAY_100 = Colors.palettes.neutral[100]
-
-const PURPLE_300 = '#242560'
-const PURPLE_400 = '#262b4b'
 
 // --- Blues
 
@@ -55,62 +50,53 @@ const LIGHT_BACKGROUND = Colors.schemes[THEME].surfaceBright
 const ANOTHER_BACKGROUND = Colors.schemes[THEME].surfaceDim
 
 // Semi-transparent widget background
-const BACKGROUND_WIDGET = alpha(PURPLE_400, 0.9)
+const BACKGROUND_WIDGET = alpha(Colors.schemes[THEME].surface, 0.9)
 // Drag and drop background for theme, used primarily in list views
 const BACKGROUND_DRAG_DROP = alpha(PRIMARY, 0.6)
+
+const INLAYS = Colors.schemes[THEME].surfaceVariant
 
 // --- Borders
 
 const BORDERS = {
-  100: '#1A1B46',
-  200: '#242560',
-  300: '#1D1E7D',
-  400: '#8C2C56',
-  500: '#FC0065',
+  100: '#ffffff',
+  200: '#ffffff',
+  300: '#ffffff',
+  400: '#ffffff',
+  500: '#ffffff',
 }
-
-const MITO_PURPLE_HOVER = '#222745'
-const VSCODE_PURPLE = '#602976'
-const VSCODE_PURPLE_HOVER = '#913eb4'
-const RADVENDER = '#864df8'
-const INLAYS = '#ff42b788'
-
-const CORAL = '#fe6083'
-
-const HUE_TEAL = '#78efc5'
-const HUE_PURPLE = '#d043cf'
 
 // --- Highlighting
 
-const HIGHLIGHT_CURRENT_LINE = '#d043cf'
-const HIGHLIGHT_RANGE = '#fd43cd'
-const HIGHLIGHT_CURRENT_SELECTION = '#874df8'
-const HIGHLIGHT_CURRENT_SELECTION_MATCH_BORDER = '#6e45c7'
-const HIGHLIGHT_MATCH = '#9736c0'
-const HIGHLIGHT_ADDL_MATCH = '#f179e1'
-const HIGHLIGHT_READ_ACCESS = '#ff5300'
-const HIGHLIGHT_WRITE_ACCESS = '#efe900'
+const HIGHLIGHT_CURRENT_LINE = '#ffffff'
+const HIGHLIGHT_RANGE = '#ffffff'
+const HIGHLIGHT_CURRENT_SELECTION = '#ffffff'
+const HIGHLIGHT_CURRENT_SELECTION_MATCH_BORDER = '#ffffff'
+const HIGHLIGHT_MATCH = '#ffffff'
+const HIGHLIGHT_ADDL_MATCH = '#ffffff'
+const HIGHLIGHT_READ_ACCESS = '#ffffff'
+const HIGHLIGHT_WRITE_ACCESS = '#ffffff'
 
 // --- Git colors
 
-const DIFF_ADDED = '#43fdd5'
-const DIFF_REMOVED = '#fe6082'
-const MERGE_CURRENT = '#fc86fe'
-const MERGE_INCOMING = '#008fe9'
-const MERGE_COMMON = '#ffd000'
+const DIFF_ADDED = '#ffffff'
+const DIFF_REMOVED = '#ffffff'
+const MERGE_CURRENT = '#ffffff'
+const MERGE_INCOMING = '#ffffff'
+const MERGE_COMMON = '#ffffff'
 
-const GIT_ADDED = '#a3ff57'
-const GIT_MODIFIED = '#ffb000'
-const GIT_DELETED = '#ff427b'
-const GIT_UNTRACKED = '#c8ff00'
-const GIT_IGNORED = '#415e6c'
-const GIT_CONFLICTING = '#ff428a'
-const GIT_SUBMODULE = '#cc6796'
+const GIT_ADDED = '#ffffff'
+const GIT_MODIFIED = '#ffffff'
+const GIT_DELETED = '#ffffff'
+const GIT_UNTRACKED = '#ffffff'
+const GIT_IGNORED = '#ffffff'
+const GIT_CONFLICTING = '#ffffff'
+const GIT_SUBMODULE = '#ffffff'
 
 // --- Status colors
 
 const INFO = Colors.schemes[THEME].tertiary
-const WARNING = '#ff9f00'
+const WARNING = '#ffffff'
 const ERROR = Colors.schemes[THEME].error
 
 // Transparent
@@ -151,7 +137,7 @@ const base = {
   'widget.shadow': SHADOW,
   // Background for text selection inside of inputs and textareas
   // (Type into the find input and then select some text)
-  'selection.background': alpha(HUE_TEAL, 0.1),
+  'selection.background': alpha(Colors.schemes[THEME].primary, 0.1),
   // Incoming/Current merge conflict labels use this
   descriptionForeground: INFO,
   // Repro: Search for something with no matches using the find widget
@@ -163,11 +149,11 @@ const base = {
 //
 
 const text = {
-  'textBlockQuote.background': PURPLE_300,
+  'textBlockQuote.background': Colors.schemes[THEME].surfaceDim,
   'textBlockQuote.border': BLUE_200,
   // Only showing inside of hover widget for code snippets (eg hover over chroma.hex())
   // It would be awesome if this showed inside READMEs code blocks...
-  'textCodeBlock.background': VSCODE_PURPLE,
+  'textCodeBlock.background': Colors.schemes[THEME].surfaceDim,
   // Includes link hover state
   'textLink.foreground': SECONDARY,
   'textLink.activeForeground': SECONDARY_HOVER,
@@ -183,8 +169,8 @@ const text = {
 // Same as badges, but with hover
 const button = {
   'button.background': PRIMARY,
-  'button.foreground': BLUE_50,
-  'button.hoverBackground': ULTRA,
+  'button.foreground': Colors.schemes[THEME].onPrimary,
+  'button.hoverBackground': PRIMARY_HOVER,
   // 'button.secondaryForeground',
   // 'button.secondaryBackground',
   // 'button.secondaryHoverBackground',
@@ -222,8 +208,8 @@ const scrollBarControl = {
 
 // Same as buttons
 const badge = {
-  'badge.background': ULTRA,
-  'badge.foreground': BLUE_100,
+  'badge.background': Colors.schemes[THEME].primary,
+  'badge.foreground': Colors.schemes[THEME].onPrimary,
 }
 
 //
@@ -231,7 +217,7 @@ const badge = {
 //
 
 const progressBar = {
-  'progressBar.background': VSCODE_PURPLE,
+  'progressBar.background': Colors.schemes[THEME].surfaceDim,
 }
 
 //
@@ -439,11 +425,11 @@ const editor = {
   'editorRuler.foreground': BACKGROUND_DRAG_DROP,
 
   // --- Code lens
-  'editorCodeLens.foreground': alpha(HUE_PURPLE, 0.5),
+  'editorCodeLens.foreground': alpha(Colors.schemes[THEME].tertiary, 0.5),
 
   // --- Bracket match
   'editorBracketMatch.background': null,
-  'editorBracketMatch.border': HUE_PURPLE,
+  'editorBracketMatch.border': Colors.schemes[THEME].tertiary,
 
   // --- Unused source code
   // (Ref: Create a fn with parameters that aren't used)
@@ -471,9 +457,9 @@ const editor = {
   // --- Snippets
   // Decorations show anytime a snippet with tabstops is triggered
   'editor.snippetTabstopHighlightBackground': alpha(PRIMARY, 0.1),
-  'editor.snippetTabstopHighlightBorder': VSCODE_PURPLE,
+  'editor.snippetTabstopHighlightBorder': Colors.schemes[THEME].primaryFixedDim,
   'editor.snippetFinalTabstopHighlightBackground': alpha(PRIMARY, 0.1),
-  'editor.snippetFinalTabstopHighlightBorder': RADVENDER,
+  'editor.snippetFinalTabstopHighlightBorder': Colors.schemes[THEME].primaryFixed,
 }
 
 // Overview ruler - located beneath scroll bar on right edge of editor and contains an
@@ -531,10 +517,10 @@ const minimap = {
 //
 
 const peekView = {
-  'peekView.border': CORAL,
+  'peekView.border': Colors.schemes[THEME].onPrimary,
   'peekViewEditor.background': DARK_BACKGROUND,
   'peekViewEditorGutter.background': DARK_BACKGROUND,
-  'peekViewEditor.matchHighlightBackground': alpha(CORAL, 0.15),
+  'peekViewEditor.matchHighlightBackground': alpha(Colors.schemes[THEME].onPrimary, 0.15),
   'peekViewEditor.matchHighlightBorder': '#0000',
   'peekViewResult.background': DARK_BACKGROUND,
   'peekViewResult.fileForeground': BLUE_200,
@@ -561,9 +547,9 @@ const activityBar = {
   'activityBar.background': ULTRA_BACKGROUND,
   'activityBar.dropBackground': BACKGROUND_DRAG_DROP,
   'activityBar.border': BORDERS[400],
-  'activityBar.foreground': ULTRA,
-  'activityBar.inactiveForeground': alpha(ULTRA, 0.6),
-  'activityBar.activeBorder': ULTRA,
+  'activityBar.foreground': Colors.schemes[THEME].onPrimary,
+  'activityBar.inactiveForeground': alpha(Colors.schemes[THEME].onPrimary, 0.6),
+  'activityBar.activeBorder': Colors.schemes[THEME].onPrimary,
   // Badges
   'activityBarBadge.background': badge['badge.background'],
   'activityBarBadge.foreground': badge['badge.foreground'],
@@ -617,14 +603,14 @@ const statusBar = {
   'statusBar.debuggingForeground': SECONDARY,
   'statusBar.debuggingBorder': PRIMARY,
   // NO FOLDER MODE
-  'statusBar.noFolderBackground': PURPLE_300,
+  'statusBar.noFolderBackground': Colors.schemes[THEME].surfaceBright,
   'statusBar.noFolderForeground': BLUE_200,
-  'statusBar.noFolderBorder': VSCODE_PURPLE,
+  'statusBar.noFolderBorder': Colors.schemes[THEME].onPrimary,
   // ℹ️ You can only style the background of status bar items
-  'statusBarItem.prominentBackground': VSCODE_PURPLE,
-  'statusBarItem.prominentHoverBackground': VSCODE_PURPLE_HOVER,
-  'statusBarItem.hoverBackground': alpha(RADVENDER, 0.2),
-  'statusBarItem.activeBackground': VSCODE_PURPLE,
+  'statusBarItem.prominentBackground': Colors.schemes[THEME].onPrimary,
+  'statusBarItem.prominentHoverBackground': Colors.schemes[THEME].onPrimaryFixedVariant,
+  'statusBarItem.hoverBackground': alpha(Colors.schemes[THEME].secondary, 0.2),
+  'statusBarItem.activeBackground': Colors.schemes[THEME].onPrimary,
 }
 
 //
@@ -633,8 +619,8 @@ const statusBar = {
 
 // Bar at top of application with title of project
 const titleBar = {
-  'titleBar.activeBackground': ULTRA_BACKGROUND,
-  'titleBar.activeForeground': ULTRA,
+  'titleBar.activeBackground': Colors.schemes[THEME].primary,
+  'titleBar.activeForeground': Colors.schemes[THEME].onPrimary,
   'titleBar.border': BORDERS[400],
   // Title bar is slightly darkened on blur by default and looks good
   'titleBar.inactiveBackground': null,
@@ -731,7 +717,7 @@ const mergeConflicts = {
 
 const debug = {
   // --- Debug status toolbar
-  'debugToolBar.background': alpha(PURPLE_300, 0.87),
+  'debugToolBar.background': alpha(Colors.schemes[THEME].surfaceBright, 0.87),
   'debugToolBar.border': TRANSPARENT,
 
   // --- Breakpoint highlighting
@@ -751,8 +737,8 @@ const debug = {
 //
 
 const welcomePage = {
-  'welcomePage.buttonBackground': PURPLE_300,
-  'welcomePage.buttonHoverBackground': MITO_PURPLE_HOVER,
+  'welcomePage.buttonBackground': Colors.schemes[THEME].surfaceBright,
+  'welcomePage.buttonHoverBackground': Colors.schemes[THEME].surfaceDim,
   'walkThrough.embeddedEditorBackground': '#1e2732',
 }
 

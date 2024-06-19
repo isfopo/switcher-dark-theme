@@ -1,6 +1,7 @@
-import { promises as fs } from 'fs'
-import path from 'path'
+import { promises as fs } from 'node:fs'
+import path from 'node:path'
 
+import { tokenColors } from './colors-tokens'
 import { workbenchColors } from './colors-workbench'
 
 const theme = {
@@ -11,7 +12,7 @@ const theme = {
   semanticClass: 'theme.dark.switcher',
   colors: workbenchColors,
   tokenColors: [
-    // ...tokenColors,
+    ...tokenColors,
     // ...comment,
     // ...go,
     // ...html,
