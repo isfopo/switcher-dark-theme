@@ -1,4 +1,5 @@
 import chroma from 'chroma-js'
+import type { FontStyle } from './types'
 
 export const alpha = (color: string, opacity: number) =>
   chroma(color).alpha(opacity).hex()
@@ -11,5 +12,3 @@ export const token = (name: string, color: string, fontStyle?: FontStyle) => ({
     fontStyle,
   },
 })
-
-type FontStyle = 'italic' | 'bold' | 'underline' | 'italic bold' | 'italic bold underline'

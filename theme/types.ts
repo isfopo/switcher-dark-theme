@@ -1,3 +1,10 @@
+export type FontStyle =
+  | 'italic'
+  | 'bold'
+  | 'underline'
+  | 'italic bold'
+  | 'italic bold underline'
+
 export interface Theme {
   seed: string
   coreColors: CoreColors
@@ -26,37 +33,37 @@ export interface Palettes {
   secondary: Palette
   tertiary: Palette
   neutral: Palette
-  "neutral-variant": Palette
+  'neutral-variant': Palette
 }
 
 export interface Schemes {
   light: Scheme
-  "light-medium-contrast": Scheme
-  "light-high-contrast": Scheme
+  'light-medium-contrast': Scheme
+  'light-high-contrast': Scheme
   dark: Scheme
-  "dark-medium-contrast": Scheme
-  "dark-high-contrast": Scheme
+  'dark-medium-contrast': Scheme
+  'dark-high-contrast': Scheme
 }
 
 export interface Palette {
-  "0": string
-  "5": string
-  "10": string
-  "15": string
-  "20": string
-  "25": string
-  "30": string
-  "35": string
-  "40": string
-  "50": string
-  "60": string
-  "70": string
-  "80": string
-  "90": string
-  "95": string
-  "98": string
-  "99": string
-  "100": string
+  '0': string
+  '5': string
+  '10': string
+  '15': string
+  '20': string
+  '25': string
+  '30': string
+  '35': string
+  '40': string
+  '50': string
+  '60': string
+  '70': string
+  '80': string
+  '90': string
+  '95': string
+  '98': string
+  '99': string
+  '100': string
 }
 
 export interface Scheme {
