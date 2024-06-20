@@ -15,7 +15,7 @@
  */
 
 import { Colors, THEME } from './colors'
-import { TRANSPARENT, alpha } from './utils'
+import { TRANSPARENT, alpha, brighten } from './utils'
 
 //
 // Theme colors
@@ -97,10 +97,12 @@ const contrast = {
 const base = {
   focusBorder: TRANSPARENT, // Default to not showing focus borders
   foreground: Colors.schemes[THEME].onSurface,
+  disabledForeground: alpha(Colors.schemes[THEME].onSurface, 0.5),
   // Background for text selection inside of inputs and textareas
   // (Type into the find input and then select some text)
   'selection.background': alpha(Colors.schemes[THEME].primary, 0.1),
   'icon.foreground': Colors.schemes[THEME].onSurface,
+  'widget.border': TRANSPARENT,
   // Incoming/Current merge conflict labels use this
   descriptionForeground: INFO,
   // Repro: Search for something with no matches using the find widget
@@ -112,16 +114,16 @@ const base = {
 //
 
 const text = {
-  'textBlockQuote.background': PRIMARY_BACKGROUND,
-  'textBlockQuote.border': PRIMARY_BACKGROUND,
+  'textBlockQuote.background': Colors.schemes[THEME].surfaceContainerHigh,
+  'textBlockQuote.border': Colors.schemes[THEME].surfaceContainerHigh,
   // Only showing inside of hover widget for code snippets (eg hover over chroma.hex())
   // It would be awesome if this showed inside READMEs code blocks...
-  'textCodeBlock.background': PRIMARY_BACKGROUND,
+  'textCodeBlock.background': Colors.schemes[THEME].surfaceContainerHigh,
   // Includes link hover state
-  'textLink.foreground': SECONDARY,
-  'textLink.activeForeground': SECONDARY_HOVER,
+  'textLink.foreground': Colors.schemes[THEME].onSurface,
+  'textLink.activeForeground': Colors.schemes[THEME].surfaceContainerHigh,
   // Monospace font texts
-  'textPreformat.foreground': PRIMARY,
+  'textPreformat.foreground': Colors.schemes[THEME].onSurface,
   'textSeparator.foreground': null, // unknown
 }
 
@@ -131,9 +133,9 @@ const text = {
 
 // Same as badges, but with hover
 const button = {
-  'button.background': PRIMARY,
+  'button.background': Colors.schemes[THEME].primary,
   'button.foreground': Colors.schemes[THEME].onPrimary,
-  'button.hoverBackground': PRIMARY_HOVER,
+  'button.hoverBackground': brighten(Colors.schemes[THEME].primary, 0.3),
   // 'button.secondaryForeground',
   // 'button.secondaryBackground',
   // 'button.secondaryHoverBackground',
