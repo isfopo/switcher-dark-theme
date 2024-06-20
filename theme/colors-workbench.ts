@@ -15,7 +15,7 @@
  */
 
 import { Colors, THEME } from './colors'
-import { alpha } from './utils'
+import { TRANSPARENT, alpha } from './utils'
 
 //
 // Theme colors
@@ -49,12 +49,11 @@ const BORDERS = '#0000'
 
 const HIGHLIGHT_CURRENT_LINE = Colors.schemes[THEME].tertiary
 const HIGHLIGHT_RANGE = Colors.schemes[THEME].tertiary
-const HIGHLIGHT_CURRENT_SELECTION = Colors.schemes[THEME].tertiary
-const HIGHLIGHT_CURRENT_SELECTION_MATCH_BORDER = '#ffffff'
-const HIGHLIGHT_MATCH = '#ffffff'
-const HIGHLIGHT_ADDL_MATCH = '#ffffff'
-const HIGHLIGHT_READ_ACCESS = '#ffffff'
-const HIGHLIGHT_WRITE_ACCESS = '#ffffff'
+const HIGHLIGHT_CURRENT_SELECTION = alpha(Colors.schemes[THEME].tertiary, 0.1)
+const HIGHLIGHT_MATCH = Colors.schemes[THEME].tertiary
+const HIGHLIGHT_ADDL_MATCH = Colors.schemes[THEME].tertiary
+const HIGHLIGHT_READ_ACCESS = Colors.schemes[THEME].tertiary
+const HIGHLIGHT_WRITE_ACCESS = Colors.schemes[THEME].tertiary
 
 // --- Git colors
 
@@ -77,9 +76,6 @@ const GIT_SUBMODULE = '#ffffff'
 const INFO = Colors.schemes[THEME].tertiary
 const WARNING = '#ffffff'
 const ERROR = Colors.schemes[THEME].error
-
-// Transparent
-const TRANSPARENT = '#0000'
 
 // Shadows are show by items that are scrolled and under widgets
 const SHADOW = alpha(PRIMARY, 0.5)
@@ -326,8 +322,8 @@ const editor = {
   'editor.inactiveSelectionBackground': null, // Default opacity adjust is 👍
   // Themes highlight of text matching the current selection, include a border
   // to make matches more obvious b/c they're frequently important!
-  'editor.selectionHighlightBackground': alpha(HIGHLIGHT_CURRENT_SELECTION, 0.1),
-  'editor.selectionHighlightBorder': HIGHLIGHT_CURRENT_SELECTION_MATCH_BORDER,
+  'editor.selectionHighlightBackground': HIGHLIGHT_CURRENT_SELECTION,
+  'editor.selectionHighlightBorder': HIGHLIGHT_CURRENT_SELECTION,
 
   // --- Find (#find_highlight)
   // The find editor widget and find panel both use these values, and can both

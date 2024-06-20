@@ -12,3 +12,6 @@ export const token = (name: string, color: string, fontStyle?: FontStyle) => ({
     fontStyle,
   },
 })
+
+// Transparent
+export const TRANSPARENT = '#0000'
