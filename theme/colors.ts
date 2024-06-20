@@ -2,6 +2,16 @@ import type { Theme } from './types'
 
 export const THEME = 'dark'
 
+export const transparency = {
+  BORDER: 0.5,
+  SHADOW: 0.5,
+  DROP: 0.8,
+  DISABLED: 0.5,
+  BACKGROUND: 0.1,
+  BACKGROUND_HOVER: 0.2,
+  INACTIVE: 0.6,
+}
+
 export const Colors: Theme = {
   seed: '#ED5623',
   coreColors: {

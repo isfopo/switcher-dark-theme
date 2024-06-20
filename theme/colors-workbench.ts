@@ -14,7 +14,7 @@
  * Typings: https://github.com/Microsoft/vscode/blob/main/src/vs/platform/theme/common/colorRegistry.ts
  */
 
-import { Colors, THEME } from './colors'
+import { Colors, THEME, transparency } from './colors'
 import { TRANSPARENT, alpha, brighten } from './utils'
 
 //
@@ -24,22 +24,16 @@ import { TRANSPARENT, alpha, brighten } from './utils'
 // --- Theme colors
 
 const PRIMARY = Colors.schemes[THEME].primary
-const SECONDARY = Colors.schemes[THEME].secondary
 const PRIMARY_HOVER = Colors.schemes[THEME].primaryFixedDim
-const SECONDARY_HOVER = Colors.schemes[THEME].secondaryFixedDim
 
 // --- Backgrounds
 
 const PRIMARY_BACKGROUND = Colors.schemes[THEME].surfaceContainerHigh
-const LIGHT_BACKGROUND = Colors.schemes[THEME].surfaceContainer
-const DARK_BACKGROUND = Colors.schemes[THEME].surfaceDim
 
 // Semi-transparent widget background
 const BACKGROUND_WIDGET = alpha(PRIMARY_BACKGROUND, 0.9)
 // Drag and drop background for theme, used primarily in list views
 const BACKGROUND_DRAG_DROP = alpha(PRIMARY, 0.6)
-
-const INLAYS = Colors.schemes[THEME].surfaceVariant
 
 // --- Borders
 
@@ -77,16 +71,6 @@ const INFO = Colors.schemes[THEME].tertiary
 const WARNING = '#ffffff'
 const ERROR = Colors.schemes[THEME].error
 
-const ALPHA = {
-  BORDER: 0.5,
-  SHADOW: 0.5,
-  DROP: 0.8,
-  DISABLED: 0.5,
-  BACKGROUND: 0.1,
-  BACKGROUND_HOVER: 0.2,
-  INACTIVE: 0.8,
-}
-
 //
 // High contrast
 //
@@ -104,10 +88,10 @@ const contrast = {
 const base = {
   focusBorder: TRANSPARENT, // Default to not showing focus borders
   foreground: Colors.schemes[THEME].onSurface,
-  disabledForeground: alpha(Colors.schemes[THEME].onSurface, ALPHA.DISABLED),
+  disabledForeground: alpha(Colors.schemes[THEME].onSurface, transparency.DISABLED),
   // Background for text selection inside of inputs and textareas
   // (Type into the find input and then select some text)
-  'selection.background': alpha(Colors.schemes[THEME].primary, ALPHA.BACKGROUND),
+  'selection.background': alpha(Colors.schemes[THEME].primary, transparency.BACKGROUND),
   'icon.foreground': Colors.schemes[THEME].onSurface,
   'widget.border': TRANSPARENT,
   // Incoming/Current merge conflict labels use this
@@ -516,12 +500,15 @@ const peekView = {
 //
 
 const activityBar = {
-  'activityBar.background': Colors.schemes[THEME].surfaceContainerLowest,
+  'activityBar.background': Colors.schemes[THEME].surfaceContainerLow,
+  'activityBar.foreground': Colors.schemes[THEME].primary,
   'activityBar.dropBackground': BACKGROUND_DRAG_DROP,
   'activityBar.border': TRANSPARENT,
-  'activityBar.foreground': Colors.schemes[THEME].onPrimary,
-  'activityBar.inactiveForeground': alpha(Colors.schemes[THEME].onPrimary, 0.6),
-  'activityBar.activeBorder': Colors.schemes[THEME].onPrimary,
+  'activityBar.inactiveForeground': alpha(
+    Colors.schemes[THEME].primary,
+    transparency.INACTIVE,
+  ),
+  'activityBar.activeBorder': Colors.schemes[THEME].primary,
   // Badges
   'activityBarBadge.background': badge['badge.background'],
   'activityBarBadge.foreground': badge['badge.foreground'],
@@ -535,12 +522,15 @@ const activityBar = {
 // Integrated Terminal.
 const panel = {
   'panel.background': Colors.schemes[THEME].surfaceContainerHigh,
-  'panel.border': alpha(Colors.schemes[THEME].primary, ALPHA.BORDER),
+  'panel.border': alpha(Colors.schemes[THEME].primary, transparency.BORDER),
   'panel.dropBackground': Colors.schemes[THEME].primary,
   // Panel title
-  'panelTitle.activeBorder': alpha(Colors.schemes[THEME].primary, ALPHA.BORDER),
+  'panelTitle.activeBorder': alpha(Colors.schemes[THEME].primary, transparency.BORDER),
   'panelTitle.activeForeground': Colors.schemes[THEME].onSurface,
-  'panelTitle.inactiveForeground': alpha(Colors.schemes[THEME].onSurface, ALPHA.INACTIVE),
+  'panelTitle.inactiveForeground': alpha(
+    Colors.schemes[THEME].onSurface,
+    transparency.INACTIVE,
+  ),
 }
 
 //
@@ -549,14 +539,14 @@ const panel = {
 
 // Contains the Explore/Debug/Extension/etc. views
 const sideBar = {
-  'sideBar.background': Colors.schemes[THEME].surfaceContainerLowest,
+  'sideBar.background': Colors.schemes[THEME].surfaceContainer,
   'sideBar.foreground': Colors.schemes[THEME].onSurface,
   'sideBar.border': BORDERS,
   'sideBar.dropBackground': Colors.schemes[THEME].primary,
   // The title for the entire side bar, eg 'EXPLORER' or 'DEBUG'
   'sideBarTitle.foreground': Colors.schemes[THEME].onSurface,
   // Side bar sections for features
-  'sideBarSectionHeader.background': Colors.schemes[THEME].surfaceContainerLowest, // same bg for subtler headers
+  'sideBarSectionHeader.background': Colors.schemes[THEME].surfaceContainer, // same bg for subtler headers
   'sideBarSectionHeader.foreground': Colors.schemes[THEME].onSurface,
   'sideBarSectionHeader.border': TRANSPARENT,
 }
@@ -567,21 +557,24 @@ const sideBar = {
 
 // Bar at bottom of application with current statuses and info
 const statusBar = {
-  'statusBar.background': PRIMARY_BACKGROUND,
-  'statusBar.foreground': Colors.schemes[THEME].onSurface,
+  'statusBar.background': Colors.schemes[THEME].surfaceContainerLow,
+  'statusBar.foreground': Colors.schemes[THEME].onPrimaryContainer,
   'statusBar.border': BORDERS,
   // DEBUGGING MODE
-  'statusBar.debuggingBackground': PRIMARY_BACKGROUND,
-  'statusBar.debuggingForeground': Colors.schemes[THEME].secondary,
-  'statusBar.debuggingBorder': PRIMARY,
+  'statusBar.debuggingBackground': Colors.schemes[THEME].primary,
+  'statusBar.debuggingForeground': Colors.schemes[THEME].onPrimary,
+  'statusBar.debuggingBorder': null,
   // NO FOLDER MODE
-  'statusBar.noFolderBackground': Colors.schemes[THEME].surfaceBright,
+  'statusBar.noFolderBackground': Colors.schemes[THEME].surfaceContainer,
   'statusBar.noFolderForeground': Colors.schemes[THEME].onSurface,
   'statusBar.noFolderBorder': Colors.schemes[THEME].onPrimary,
   // ℹ️ You can only style the background of status bar items
   'statusBarItem.prominentBackground': Colors.schemes[THEME].onPrimary,
   'statusBarItem.prominentHoverBackground': Colors.schemes[THEME].onPrimaryFixedVariant,
-  'statusBarItem.hoverBackground': alpha(Colors.schemes[THEME].secondary, 0.2),
+  'statusBarItem.hoverBackground': alpha(
+    Colors.schemes[THEME].primary,
+    transparency.BACKGROUND_HOVER,
+  ),
   'statusBarItem.activeBackground': Colors.schemes[THEME].onPrimary,
 }
 
@@ -593,10 +586,10 @@ const statusBar = {
 const titleBar = {
   'titleBar.activeBackground': Colors.schemes[THEME].primary,
   'titleBar.activeForeground': Colors.schemes[THEME].onPrimary,
-  'titleBar.border': BORDERS,
+  'titleBar.border': TRANSPARENT,
   // Title bar is slightly darkened on blur by default and looks good
-  'titleBar.inactiveBackground': null,
-  'titleBar.inactiveForeground': null,
+  'titleBar.inactiveBackground': Colors.schemes[THEME].surfaceContainerLow,
+  'titleBar.inactiveForeground': Colors.schemes[THEME].onSurface,
 }
 
 //
