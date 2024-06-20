@@ -501,17 +501,17 @@ const peekView = {
 
 const activityBar = {
   'activityBar.background': Colors.schemes[THEME].surfaceContainerLow,
-  'activityBar.foreground': Colors.schemes[THEME].primary,
+  'activityBar.foreground': Colors.schemes[THEME].secondary,
   'activityBar.dropBackground': BACKGROUND_DRAG_DROP,
   'activityBar.border': TRANSPARENT,
   'activityBar.inactiveForeground': alpha(
-    Colors.schemes[THEME].primary,
+    Colors.schemes[THEME].secondary,
     transparency.INACTIVE,
   ),
-  'activityBar.activeBorder': Colors.schemes[THEME].primary,
+  'activityBar.activeBorder': Colors.schemes[THEME].secondary,
   // Badges
-  'activityBarBadge.background': badge['badge.background'],
-  'activityBarBadge.foreground': badge['badge.foreground'],
+  'activityBarBadge.background': Colors.schemes[THEME].onSecondaryContainer,
+  'activityBarBadge.foreground': Colors.schemes[THEME].secondaryContainer,
 }
 
 //
@@ -522,10 +522,10 @@ const activityBar = {
 // Integrated Terminal.
 const panel = {
   'panel.background': Colors.schemes[THEME].surfaceContainerHigh,
-  'panel.border': alpha(Colors.schemes[THEME].primary, transparency.BORDER),
-  'panel.dropBackground': Colors.schemes[THEME].primary,
+  'panel.border': alpha(Colors.schemes[THEME].secondary, transparency.BORDER),
+  'panel.dropBackground': Colors.schemes[THEME].secondary,
   // Panel title
-  'panelTitle.activeBorder': alpha(Colors.schemes[THEME].primary, transparency.BORDER),
+  'panelTitle.activeBorder': alpha(Colors.schemes[THEME].secondary, transparency.BORDER),
   'panelTitle.activeForeground': Colors.schemes[THEME].onSurface,
   'panelTitle.inactiveForeground': alpha(
     Colors.schemes[THEME].onSurface,
@@ -542,7 +542,7 @@ const sideBar = {
   'sideBar.background': Colors.schemes[THEME].surfaceContainer,
   'sideBar.foreground': Colors.schemes[THEME].onSurface,
   'sideBar.border': BORDERS,
-  'sideBar.dropBackground': Colors.schemes[THEME].primary,
+  'sideBar.dropBackground': Colors.schemes[THEME].secondary,
   // The title for the entire side bar, eg 'EXPLORER' or 'DEBUG'
   'sideBarTitle.foreground': Colors.schemes[THEME].onSurface,
   // Side bar sections for features
@@ -558,24 +558,24 @@ const sideBar = {
 // Bar at bottom of application with current statuses and info
 const statusBar = {
   'statusBar.background': Colors.schemes[THEME].surfaceContainerLow,
-  'statusBar.foreground': Colors.schemes[THEME].onPrimaryContainer,
+  'statusBar.foreground': Colors.schemes[THEME].onSecondaryContainer,
   'statusBar.border': BORDERS,
   // DEBUGGING MODE
-  'statusBar.debuggingBackground': Colors.schemes[THEME].primary,
-  'statusBar.debuggingForeground': Colors.schemes[THEME].onPrimary,
+  'statusBar.debuggingBackground': Colors.schemes[THEME].secondary,
+  'statusBar.debuggingForeground': Colors.schemes[THEME].onSecondary,
   'statusBar.debuggingBorder': null,
   // NO FOLDER MODE
   'statusBar.noFolderBackground': Colors.schemes[THEME].surfaceContainer,
   'statusBar.noFolderForeground': Colors.schemes[THEME].onSurface,
-  'statusBar.noFolderBorder': Colors.schemes[THEME].onPrimary,
+  'statusBar.noFolderBorder': Colors.schemes[THEME].onSecondary,
   // ℹ️ You can only style the background of status bar items
-  'statusBarItem.prominentBackground': Colors.schemes[THEME].onPrimary,
+  'statusBarItem.prominentBackground': Colors.schemes[THEME].onSecondary,
   'statusBarItem.prominentHoverBackground': Colors.schemes[THEME].onPrimaryFixedVariant,
   'statusBarItem.hoverBackground': alpha(
-    Colors.schemes[THEME].primary,
+    Colors.schemes[THEME].secondary,
     transparency.BACKGROUND_HOVER,
   ),
-  'statusBarItem.activeBackground': Colors.schemes[THEME].onPrimary,
+  'statusBarItem.activeBackground': Colors.schemes[THEME].onSecondary,
 }
 
 //
@@ -584,8 +584,8 @@ const statusBar = {
 
 // Bar at top of application with title of project
 const titleBar = {
-  'titleBar.activeBackground': Colors.schemes[THEME].primary,
-  'titleBar.activeForeground': Colors.schemes[THEME].onPrimary,
+  'titleBar.activeBackground': Colors.schemes[THEME].secondary,
+  'titleBar.activeForeground': Colors.schemes[THEME].onSecondary,
   'titleBar.border': TRANSPARENT,
   // Title bar is slightly darkened on blur by default and looks good
   'titleBar.inactiveBackground': Colors.schemes[THEME].surfaceContainerLow,
