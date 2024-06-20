@@ -77,8 +77,15 @@ const INFO = Colors.schemes[THEME].tertiary
 const WARNING = '#ffffff'
 const ERROR = Colors.schemes[THEME].error
 
-// Shadows are show by items that are scrolled and under widgets
-const SHADOW = alpha(PRIMARY, 0.5)
+const ALPHA = {
+  BORDER: 0.5,
+  SHADOW: 0.5,
+  DROP: 0.8,
+  DISABLED: 0.5,
+  BACKGROUND: 0.1,
+  BACKGROUND_HOVER: 0.2,
+  INACTIVE: 0.8,
+}
 
 //
 // High contrast
@@ -97,10 +104,10 @@ const contrast = {
 const base = {
   focusBorder: TRANSPARENT, // Default to not showing focus borders
   foreground: Colors.schemes[THEME].onSurface,
-  disabledForeground: alpha(Colors.schemes[THEME].onSurface, 0.5),
+  disabledForeground: alpha(Colors.schemes[THEME].onSurface, ALPHA.DISABLED),
   // Background for text selection inside of inputs and textareas
   // (Type into the find input and then select some text)
-  'selection.background': alpha(Colors.schemes[THEME].primary, 0.1),
+  'selection.background': alpha(Colors.schemes[THEME].primary, ALPHA.BACKGROUND),
   'icon.foreground': Colors.schemes[THEME].onSurface,
   'widget.border': TRANSPARENT,
   // Incoming/Current merge conflict labels use this
@@ -486,7 +493,7 @@ const peekView = {
   'peekViewEditor.background': Colors.schemes[THEME].surfaceContainer,
   'peekViewEditorGutter.background': Colors.schemes[THEME].surfaceContainer,
   'peekViewEditor.matchHighlightBackground': alpha(Colors.schemes[THEME].onPrimary, 0.15),
-  'peekViewEditor.matchHighlightBorder': '#0000',
+  'peekViewEditor.matchHighlightBorder': TRANSPARENT,
   'peekViewResult.background': Colors.schemes[THEME].surfaceContainer,
   'peekViewResult.fileForeground': Colors.schemes[THEME].onSurface,
   'peekViewResult.lineForeground': Colors.schemes[THEME].onSurface,
@@ -509,9 +516,9 @@ const peekView = {
 //
 
 const activityBar = {
-  'activityBar.background': Colors.schemes[THEME].surfaceContainer,
+  'activityBar.background': Colors.schemes[THEME].surfaceContainerLowest,
   'activityBar.dropBackground': BACKGROUND_DRAG_DROP,
-  'activityBar.border': BORDERS,
+  'activityBar.border': TRANSPARENT,
   'activityBar.foreground': Colors.schemes[THEME].onPrimary,
   'activityBar.inactiveForeground': alpha(Colors.schemes[THEME].onPrimary, 0.6),
   'activityBar.activeBorder': Colors.schemes[THEME].onPrimary,
@@ -527,13 +534,13 @@ const activityBar = {
 // Panels are shown below the editor area and contain views like Output and
 // Integrated Terminal.
 const panel = {
-  'panel.background': Colors.schemes[THEME].surfaceContainer,
-  'panel.border': BORDERS,
-  'panel.dropBackground': BACKGROUND_DRAG_DROP,
+  'panel.background': Colors.schemes[THEME].surfaceContainerHigh,
+  'panel.border': alpha(Colors.schemes[THEME].primary, ALPHA.BORDER),
+  'panel.dropBackground': Colors.schemes[THEME].primary,
   // Panel title
-  'panelTitle.activeBorder': PRIMARY,
+  'panelTitle.activeBorder': alpha(Colors.schemes[THEME].primary, ALPHA.BORDER),
   'panelTitle.activeForeground': Colors.schemes[THEME].onSurface,
-  'panelTitle.inactiveForeground': Colors.schemes[THEME].onSurface,
+  'panelTitle.inactiveForeground': alpha(Colors.schemes[THEME].onSurface, ALPHA.INACTIVE),
 }
 
 //
@@ -542,16 +549,16 @@ const panel = {
 
 // Contains the Explore/Debug/Extension/etc. views
 const sideBar = {
-  'sideBar.background': Colors.schemes[THEME].surfaceContainerLow,
+  'sideBar.background': Colors.schemes[THEME].surfaceContainerLowest,
   'sideBar.foreground': Colors.schemes[THEME].onSurface,
   'sideBar.border': BORDERS,
-  'sideBar.dropBackground': BACKGROUND_DRAG_DROP,
+  'sideBar.dropBackground': Colors.schemes[THEME].primary,
   // The title for the entire side bar, eg 'EXPLORER' or 'DEBUG'
   'sideBarTitle.foreground': Colors.schemes[THEME].onSurface,
   // Side bar sections for features
-  'sideBarSectionHeader.background': PRIMARY_BACKGROUND, // same bg for subtler headers
+  'sideBarSectionHeader.background': Colors.schemes[THEME].surfaceContainerLowest, // same bg for subtler headers
   'sideBarSectionHeader.foreground': Colors.schemes[THEME].onSurface,
-  'sideBarSectionHeader.border': TRANSPARENT, // ?? Maybe add a color here ??
+  'sideBarSectionHeader.border': TRANSPARENT,
 }
 
 //
