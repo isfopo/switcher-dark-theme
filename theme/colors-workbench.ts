@@ -136,12 +136,13 @@ const button = {
   'button.background': Colors.schemes[THEME].primary,
   'button.foreground': Colors.schemes[THEME].onPrimary,
   'button.hoverBackground': brighten(Colors.schemes[THEME].primary, 0.3),
-  // 'button.secondaryForeground',
-  // 'button.secondaryBackground',
-  // 'button.secondaryHoverBackground',
-  // 'checkbox.background'
-  // 'checkbox.foreground'
-  // 'checkbox.border'
+  'button.separator': TRANSPARENT,
+  'button.secondaryForeground': Colors.schemes[THEME].onSecondary,
+  'button.secondaryBackground': Colors.schemes[THEME].secondary,
+  'button.secondaryHoverBackground': brighten(Colors.schemes[THEME].secondary, 0.3),
+  'checkbox.background': Colors.schemes[THEME].primary,
+  'checkbox.foreground': Colors.schemes[THEME].onPrimary,
+  'checkbox.border': Colors.schemes[THEME].primary,
 }
 
 //
@@ -149,10 +150,10 @@ const button = {
 //
 
 const dropdown = {
-  'dropdown.background': DARK_BACKGROUND,
+  'dropdown.background': Colors.schemes[THEME].surfaceContainerHighest,
   'dropdown.listBackground': BACKGROUND_WIDGET,
   'dropdown.foreground': Colors.schemes[THEME].onSurface,
-  'dropdown.border': BORDERS,
+  'dropdown.border': TRANSPARENT,
 }
 
 //
