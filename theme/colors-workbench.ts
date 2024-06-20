@@ -161,18 +161,17 @@ const dropdown = {
 //
 
 const scrollBarControl = {
-  'scrollbar.shadow': SHADOW,
+  'scrollbar.shadow': Colors.schemes[THEME].shadow,
   // Scroll bar is primary with decreasing opacity
-  'scrollbarSlider.background': alpha(PRIMARY, 0.1),
-  'scrollbarSlider.hoverBackground': alpha(PRIMARY, 0.25),
-  'scrollbarSlider.activeBackground': alpha(PRIMARY, 0.4),
+  'scrollbarSlider.background': alpha(Colors.schemes[THEME].primary, 0.1),
+  'scrollbarSlider.hoverBackground': alpha(Colors.schemes[THEME].primary, 0.25),
+  'scrollbarSlider.activeBackground': alpha(Colors.schemes[THEME].primary, 0.4),
 }
 
 //
 // Badges
 //
 
-// Same as buttons
 const badge = {
   'badge.background': Colors.schemes[THEME].primary,
   'badge.foreground': Colors.schemes[THEME].onPrimary,
@@ -183,7 +182,7 @@ const badge = {
 //
 
 const progressBar = {
-  'progressBar.background': DARK_BACKGROUND,
+  'progressBar.background': Colors.schemes[THEME].surfaceContainer,
 }
 
 //
@@ -192,15 +191,15 @@ const progressBar = {
 
 const listsTrees = {
   // Mouse hover
-  'list.hoverBackground': alpha(SECONDARY, 0.05),
+  'list.hoverBackground': alpha(Colors.schemes[THEME].secondary, 0.05),
   'list.hoverForeground': Colors.schemes[THEME].onSecondary,
   // Keyboard focus - using slightly higher alpha to make selection more obvious,
   // this helps UX for things like project and command dropdown selection with
   // the keyboard
-  'list.focusBackground': alpha(SECONDARY, 0.2),
+  'list.focusBackground': alpha(Colors.schemes[THEME].secondary, 0.2),
   'list.focusForeground': Colors.schemes[THEME].onSecondary,
   // Selected item when the list container is in focus
-  'list.activeSelectionBackground': alpha(SECONDARY, 0.1),
+  'list.activeSelectionBackground': alpha(Colors.schemes[THEME].secondary, 0.1),
   'list.activeSelectionForeground': Colors.schemes[THEME].onSecondary,
   // Selected item when the list container is NOT in focus. (Currently assuming
   // this really only applies to file explorer view, where having the last file
@@ -211,7 +210,7 @@ const listsTrees = {
   // Focused item when the list container is NOT in focus
   'list.inactiveFocusBackground': null, // unknown
   // Drag and drop background, shows when you hover a drag item over a droppable area
-  'list.dropBackground': BACKGROUND_DRAG_DROP,
+  'list.dropBackground': Colors.schemes[THEME].surfaceContainerHighest,
   // The text that matches a search term inside of lists
   'list.highlightForeground': Colors.schemes[THEME].onPrimary,
   'list.errorForeground': ERROR,
@@ -219,7 +218,7 @@ const listsTrees = {
   'list.invalidItemForeground': null,
 
   // Vertical lines in tree view shown for open directories
-  'tree.indentGuidesStroke': BORDERS,
+  'tree.indentGuidesStroke': alpha(Colors.schemes[THEME].secondary, 0.5),
 }
 
 //
@@ -227,12 +226,12 @@ const listsTrees = {
 //
 
 const input = {
-  'input.background': LIGHT_BACKGROUND,
-  'input.border': BORDERS,
+  'input.background': Colors.schemes[THEME].surfaceContainerHighest,
+  'input.border': TRANSPARENT,
   'input.foreground': Colors.schemes[THEME].onSurface,
   'input.placeholderForeground': Colors.schemes[THEME].onSurface,
   // The controls inside of the input for setting search constraints
-  'inputOption.activeBorder': BORDERS,
+  'inputOption.activeBorder': TRANSPARENT,
   'inputOption.activeBackground': alpha(PRIMARY, 0.15),
   'inputValidation.errorBackground': ERROR,
   'inputValidation.errorBorder': ERROR,
@@ -498,10 +497,10 @@ const peekView = {
   // The background and foreground color for the entire line of the current
   // match selection in the peek sidebar
   'peekViewResult.selectionBackground': alpha(HIGHLIGHT_RANGE, 0.1),
-  'peekViewResult.selectionForeground': SECONDARY,
+  'peekViewResult.selectionForeground': Colors.schemes[THEME].secondary,
 
   'peekViewTitle.background': PRIMARY_BACKGROUND,
-  'peekViewTitleLabel.foreground': SECONDARY,
+  'peekViewTitleLabel.foreground': Colors.schemes[THEME].secondary,
   'peekViewTitleDescription.foreground': Colors.schemes[THEME].onSurface,
 }
 
@@ -566,7 +565,7 @@ const statusBar = {
   'statusBar.border': BORDERS,
   // DEBUGGING MODE
   'statusBar.debuggingBackground': PRIMARY_BACKGROUND,
-  'statusBar.debuggingForeground': SECONDARY,
+  'statusBar.debuggingForeground': Colors.schemes[THEME].secondary,
   'statusBar.debuggingBorder': PRIMARY,
   // NO FOLDER MODE
   'statusBar.noFolderBackground': Colors.schemes[THEME].surfaceBright,
@@ -613,7 +612,7 @@ const menuBar = {
 //
 
 const extension = {
-  'extensionButton.prominentForeground': SECONDARY,
+  'extensionButton.prominentForeground': Colors.schemes[THEME].secondary,
   'extensionButton.prominentBackground': PRIMARY,
   'extensionButton.prominentHoverBackground': PRIMARY_HOVER,
 }
@@ -623,8 +622,8 @@ const extension = {
 //
 
 const quickInput = {
-  'pickerGroup.border': BORDERS,
-  'pickerGroup.foreground': SECONDARY,
+  'pickerGroup.border': TRANSPARENT,
+  'pickerGroup.foreground': Colors.schemes[THEME].secondary,
   // Add a fun widget background style to the quick input which opens on go to
   // file, go to symbol, etc.
   'quickInput.background': BACKGROUND_WIDGET,
@@ -712,11 +711,9 @@ const welcomePage = {
 // Breadcrumbs
 //
 
-// By default breadcrumbs look good, they have the foreground gray with the
-// alpha mito purple and primary accent colors
 const breadcrumbs = {
-  'breadcrumb.background': PRIMARY_BACKGROUND,
-  'breadcrumb.foreground': Colors.schemes[THEME].tertiary,
+  'breadcrumb.background': Colors.schemes[THEME].surfaceContainerHigh,
+  'breadcrumb.foreground': alpha(Colors.schemes[THEME].onSurface, 0.8),
   // When a breadcrumb is hovered or focused with 'Focus breadcrumbs' command,
   // this will apply
   'breadcrumb.focusForeground': Colors.schemes[THEME].onSurface,
@@ -724,17 +721,17 @@ const breadcrumbs = {
   // and this will apply
   'breadcrumb.activeSelectionForeground': Colors.schemes[THEME].onSurface,
   // Dropdown triggered when you click a breadcrum
-  'breadcrumbPicker.background': BACKGROUND_WIDGET,
+  'breadcrumbPicker.background': Colors.schemes[THEME].surfaceContainerHigh,
 }
 
 // --------------------------------------------------------
 // TERMINAL
 
 const terminal = {
-  'terminal.background': LIGHT_BACKGROUND,
-  'terminal.foreground': Colors.schemes[THEME].tertiary,
+  'terminal.background': Colors.schemes[THEME].surfaceContainerHigh,
+  'terminal.foreground': Colors.schemes[THEME].onSurface,
   // Border between multiple terminals
-  'terminal.border': PRIMARY_BACKGROUND,
+  'terminal.border': TRANSPARENT,
 
   'terminal.selectionBackground': '#874df84d',
 
