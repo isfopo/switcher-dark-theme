@@ -96,10 +96,11 @@ const contrast = {
 
 const base = {
   focusBorder: TRANSPARENT, // Default to not showing focus borders
-  foreground: Colors.schemes[THEME].tertiary,
+  foreground: Colors.schemes[THEME].onSurface,
   // Background for text selection inside of inputs and textareas
   // (Type into the find input and then select some text)
   'selection.background': alpha(Colors.schemes[THEME].primary, 0.1),
+  'icon.foreground': Colors.schemes[THEME].onSurface,
   // Incoming/Current merge conflict labels use this
   descriptionForeground: INFO,
   // Repro: Search for something with no matches using the find widget
@@ -255,7 +256,7 @@ const editorGroup = {
   // If you're not using tabs, show regular background, can't think of a better
   // color for that display
   'editorGroupHeader.noTabsBackground': null,
-  'editorGroupHeader.tabsBackground': PRIMARY_BACKGROUND,
+  'editorGroupHeader.tabsBackground': Colors.schemes[THEME].surfaceContainerHigh,
   'editorGroupHeader.tabsBorder': BORDERS,
   'editorGroupHeader.border': BORDERS,
 }
@@ -265,14 +266,14 @@ const tab = {
   // Border is *between* tabs, set to background so there isn't a border
   'tab.border': TRANSPARENT,
   'tab.activeBorder': TRANSPARENT,
-  'tab.activeBorderTop': BORDERS,
-  'tab.activeBackground': PRIMARY_BACKGROUND,
+  'tab.activeBorderTop': TRANSPARENT,
+  'tab.activeBackground': Colors.schemes[THEME].surfaceContainerHigh,
   'tab.activeForeground': Colors.schemes[THEME].onSurface,
-  'tab.inactiveBackground': LIGHT_BACKGROUND,
+  'tab.inactiveBackground': Colors.schemes[THEME].surfaceContainer,
   'tab.inactiveForeground': Colors.schemes[THEME].onSurface,
   // --- Hover
-  'tab.hoverBackground': null,
-  'tab.hoverBorder': Colors.schemes[THEME].onSurface,
+  'tab.hoverBackground': Colors.schemes[THEME].surfaceContainerHighest,
+  'tab.hoverBorder': null,
   // --- Unfocused editor group tabs
   // default styles slightly darken tab colors and look good 👍
   'tab.unfocusedActiveBorder': null,
@@ -284,7 +285,7 @@ const tab = {
 }
 
 const editor = {
-  'editor.background': LIGHT_BACKGROUND,
+  'editor.background': Colors.schemes[THEME].surfaceContainerHigh,
   // The editor default foreground shows up in widgets, is the color of the
   // separators in merge conflicts
   'editor.foreground': Colors.schemes[THEME].onPrimary,
@@ -480,11 +481,11 @@ const minimap = {
 
 const peekView = {
   'peekView.border': Colors.schemes[THEME].onPrimary,
-  'peekViewEditor.background': PRIMARY_BACKGROUND,
-  'peekViewEditorGutter.background': PRIMARY_BACKGROUND,
+  'peekViewEditor.background': Colors.schemes[THEME].surfaceContainer,
+  'peekViewEditorGutter.background': Colors.schemes[THEME].surfaceContainer,
   'peekViewEditor.matchHighlightBackground': alpha(Colors.schemes[THEME].onPrimary, 0.15),
   'peekViewEditor.matchHighlightBorder': '#0000',
-  'peekViewResult.background': PRIMARY_BACKGROUND,
+  'peekViewResult.background': Colors.schemes[THEME].surfaceContainer,
   'peekViewResult.fileForeground': Colors.schemes[THEME].onSurface,
   'peekViewResult.lineForeground': Colors.schemes[THEME].onSurface,
 
@@ -506,7 +507,7 @@ const peekView = {
 //
 
 const activityBar = {
-  'activityBar.background': PRIMARY_BACKGROUND,
+  'activityBar.background': Colors.schemes[THEME].surfaceContainer,
   'activityBar.dropBackground': BACKGROUND_DRAG_DROP,
   'activityBar.border': BORDERS,
   'activityBar.foreground': Colors.schemes[THEME].onPrimary,
@@ -524,7 +525,7 @@ const activityBar = {
 // Panels are shown below the editor area and contain views like Output and
 // Integrated Terminal.
 const panel = {
-  'panel.background': PRIMARY_BACKGROUND,
+  'panel.background': Colors.schemes[THEME].surfaceContainer,
   'panel.border': BORDERS,
   'panel.dropBackground': BACKGROUND_DRAG_DROP,
   // Panel title
@@ -539,7 +540,7 @@ const panel = {
 
 // Contains the Explore/Debug/Extension/etc. views
 const sideBar = {
-  'sideBar.background': PRIMARY_BACKGROUND,
+  'sideBar.background': Colors.schemes[THEME].surfaceContainerLow,
   'sideBar.foreground': Colors.schemes[THEME].onSurface,
   'sideBar.border': BORDERS,
   'sideBar.dropBackground': BACKGROUND_DRAG_DROP,
