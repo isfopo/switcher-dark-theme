@@ -30,8 +30,8 @@ const SECONDARY_HOVER = Colors.schemes[THEME].secondaryFixedDim
 
 // --- Backgrounds
 
-const PRIMARY_BACKGROUND = Colors.schemes[THEME].surface
-const LIGHT_BACKGROUND = Colors.schemes[THEME].surfaceBright
+const PRIMARY_BACKGROUND = Colors.schemes[THEME].surfaceContainerHigh
+const LIGHT_BACKGROUND = Colors.schemes[THEME].surfaceContainer
 const ANOTHER_BACKGROUND = Colors.schemes[THEME].surfaceDim
 
 // Semi-transparent widget background
@@ -47,9 +47,9 @@ const BORDERS = '#0000'
 
 // --- Highlighting
 
-const HIGHLIGHT_CURRENT_LINE = '#ffffff'
-const HIGHLIGHT_RANGE = '#ffffff'
-const HIGHLIGHT_CURRENT_SELECTION = '#ffffff'
+const HIGHLIGHT_CURRENT_LINE = Colors.schemes[THEME].tertiary
+const HIGHLIGHT_RANGE = Colors.schemes[THEME].tertiary
+const HIGHLIGHT_CURRENT_SELECTION = Colors.schemes[THEME].tertiary
 const HIGHLIGHT_CURRENT_SELECTION_MATCH_BORDER = '#ffffff'
 const HIGHLIGHT_MATCH = '#ffffff'
 const HIGHLIGHT_ADDL_MATCH = '#ffffff'
@@ -288,7 +288,7 @@ const tab = {
 }
 
 const editor = {
-  'editor.background': PRIMARY_BACKGROUND,
+  'editor.background': LIGHT_BACKGROUND,
   // The editor default foreground shows up in widgets, is the color of the
   // separators in merge conflicts
   'editor.foreground': Colors.schemes[THEME].onPrimary,
