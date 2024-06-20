@@ -32,10 +32,10 @@ const SECONDARY_HOVER = Colors.schemes[THEME].secondaryFixedDim
 
 const PRIMARY_BACKGROUND = Colors.schemes[THEME].surfaceContainerHigh
 const LIGHT_BACKGROUND = Colors.schemes[THEME].surfaceContainer
-const ANOTHER_BACKGROUND = Colors.schemes[THEME].surfaceDim
+const DARK_BACKGROUND = Colors.schemes[THEME].surfaceDim
 
 // Semi-transparent widget background
-const BACKGROUND_WIDGET = alpha(Colors.schemes[THEME].surface, 0.9)
+const BACKGROUND_WIDGET = alpha(PRIMARY_BACKGROUND, 0.9)
 // Drag and drop background for theme, used primarily in list views
 const BACKGROUND_DRAG_DROP = alpha(PRIMARY, 0.6)
 
@@ -150,7 +150,7 @@ const button = {
 //
 
 const dropdown = {
-  'dropdown.background': ANOTHER_BACKGROUND,
+  'dropdown.background': DARK_BACKGROUND,
   'dropdown.listBackground': BACKGROUND_WIDGET,
   'dropdown.foreground': Colors.schemes[THEME].onSurface,
   'dropdown.border': BORDERS,
@@ -183,7 +183,7 @@ const badge = {
 //
 
 const progressBar = {
-  'progressBar.background': Colors.schemes[THEME].surfaceDim,
+  'progressBar.background': DARK_BACKGROUND,
 }
 
 //
@@ -267,12 +267,12 @@ const editorGroup = {
 // Editor tabs
 const tab = {
   // Border is *between* tabs, set to background so there isn't a border
-  'tab.border': PRIMARY_BACKGROUND,
+  'tab.border': TRANSPARENT,
   'tab.activeBorder': TRANSPARENT,
   'tab.activeBorderTop': BORDERS,
   'tab.activeBackground': PRIMARY_BACKGROUND,
   'tab.activeForeground': Colors.schemes[THEME].onSurface,
-  'tab.inactiveBackground': PRIMARY_BACKGROUND,
+  'tab.inactiveBackground': LIGHT_BACKGROUND,
   'tab.inactiveForeground': Colors.schemes[THEME].onSurface,
   // --- Hover
   'tab.hoverBackground': null,
@@ -719,10 +719,10 @@ const breadcrumbs = {
   'breadcrumb.foreground': Colors.schemes[THEME].tertiary,
   // When a breadcrumb is hovered or focused with 'Focus breadcrumbs' command,
   // this will apply
-  'breadcrumb.focusForeground': SECONDARY,
+  'breadcrumb.focusForeground': Colors.schemes[THEME].onSurface,
   // After a focused breadcrumb has been opened to show the picker, it is active
   // and this will apply
-  'breadcrumb.activeSelectionForeground': SECONDARY,
+  'breadcrumb.activeSelectionForeground': Colors.schemes[THEME].onSurface,
   // Dropdown triggered when you click a breadcrum
   'breadcrumbPicker.background': BACKGROUND_WIDGET,
 }
@@ -731,10 +731,10 @@ const breadcrumbs = {
 // TERMINAL
 
 const terminal = {
-  'terminal.background': PRIMARY_BACKGROUND,
-  'terminal.foreground': '#A8D2D4',
+  'terminal.background': LIGHT_BACKGROUND,
+  'terminal.foreground': Colors.schemes[THEME].tertiary,
   // Border between multiple terminals
-  'terminal.border': BORDERS,
+  'terminal.border': PRIMARY_BACKGROUND,
 
   'terminal.selectionBackground': '#874df84d',
 
