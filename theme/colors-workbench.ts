@@ -249,18 +249,18 @@ const input = {
 // represented by a tab
 const editorGroup = {
   // Border applies to multiple editor groups
-  'editorGroup.border': BORDERS,
+  'editorGroup.border': TRANSPARENT,
   'editorGroup.dropBackground': BACKGROUND_DRAG_DROP,
   // When all tabs are closed the editorGroup is empty, you would see this on
   // opening VSCode without a previous project, eg cmd+shift+n
-  'editorGroup.emptyBackground': null,
+  'editorGroup.emptyBackground': Colors.schemes[THEME].surfaceContainer,
   'editorGroup.focusedEmptyBorder': TRANSPARENT,
   // If you're not using tabs, show regular background, can't think of a better
   // color for that display
-  'editorGroupHeader.noTabsBackground': null,
+  'editorGroupHeader.noTabsBackground': Colors.schemes[THEME].surfaceContainer,
   'editorGroupHeader.tabsBackground': Colors.schemes[THEME].surfaceContainerHigh,
-  'editorGroupHeader.tabsBorder': BORDERS,
-  'editorGroupHeader.border': BORDERS,
+  'editorGroupHeader.tabsBorder': TRANSPARENT,
+  'editorGroupHeader.border': TRANSPARENT,
 }
 
 // Editor tabs
@@ -275,7 +275,7 @@ const tab = {
   'tab.inactiveForeground': Colors.schemes[THEME].onSurface,
   // --- Hover
   'tab.hoverBackground': Colors.schemes[THEME].surfaceContainerHighest,
-  'tab.hoverBorder': null,
+  'tab.hoverForeground': Colors.schemes[THEME].onSurfaceVariant,
   // --- Unfocused editor group tabs
   // default styles slightly darken tab colors and look good 👍
   'tab.unfocusedActiveBorder': null,
@@ -293,8 +293,8 @@ const editor = {
   'editor.foreground': Colors.schemes[THEME].onPrimary,
 
   // --- Line number colors
-  'editorLineNumber.foreground': Colors.schemes[THEME].onSurface,
-  'editorLineNumber.activeForeground': Colors.schemes[THEME].onSurface,
+  'editorLineNumber.foreground': Colors.schemes[THEME].onSurfaceVariant,
+  'editorLineNumber.activeForeground': Colors.schemes[THEME].onPrimaryContainer,
 
   // Editor highlighting (#highlighting)
   // ------------------------------------
@@ -306,13 +306,12 @@ const editor = {
   // actions like switching to find widget removes current line highlight. The
   // highlight is also removed when making a selection.
   'editor.lineHighlightBackground': alpha(HIGHLIGHT_CURRENT_LINE, 0.07),
-  'editor.lineHighlightBorder': TRANSPARENT, // ETOOMUCHBORDER
+  'editor.lineHighlightBorder': TRANSPARENT,
 
   // --- Range highlight (#current_range_highlight)
   // Highlights ranges of current matches, including the currently selected
   // match for find and currently selected symbol in Go to symbol. No border
   // because range highlight can match multiple lines for go to symbol and each
-  // line gets a border ETOOMUCHCOLOR
   'editor.rangeHighlightBackground': alpha(HIGHLIGHT_RANGE, 0.07),
   'editor.rangeHighlightBorder': TRANSPARENT, // ETOOMUCHBORDER
 
@@ -334,12 +333,12 @@ const editor = {
   // currently selected find match, which is automatically selected when using
   // the find widget, but must actively be selected when using the find panel.
   'editor.findMatchBackground': TRANSPARENT,
-  'editor.findMatchBorder': alpha(HIGHLIGHT_MATCH, 0.55),
+  'editor.findMatchBorder': TRANSPARENT,
   'editor.findMatchHighlightBackground': TRANSPARENT,
-  'editor.findMatchHighlightBorder': alpha(HIGHLIGHT_ADDL_MATCH, 0.8),
+  'editor.findMatchHighlightBorder': TRANSPARENT,
   // (select text and type alt+cmd+L to toggle)
   'editor.findRangeHighlightBackground': alpha(HIGHLIGHT_RANGE, 0.07),
-  'editor.findRangeHighlightBorder': null, // ETOOMUCHBORDER
+  'editor.findRangeHighlightBorder': TRANSPARENT,
 
   // --- Symbol access (#symbol_access_highlight)
   // Symbol (and word) access highlighting is shown when the cursor is inside a
@@ -367,17 +366,18 @@ const editor = {
   // and cursor background which is really confusing (aka these are flipped to
   // what you would guess they are)
   'editorCursor.background': null,
-  'editorCursor.foreground': PRIMARY,
+  'editorCursor.foreground': Colors.schemes[THEME].primary,
+  'editorMultiCursor.secondary.foreground': alpha(Colors.schemes[THEME].primary, 0.6),
 
   // --- Editor links colors
   // Links are active when holding cmd on top of them, note that the hover
   // background also shows at this time. Using a bright teal to contrast more
   // with the translucent purple hover
-  'editorLink.activeForeground': '#43fdd5',
+  'editorLink.activeForeground': Colors.schemes[THEME].primary,
 
   // --- Inlay hints
   'editorInlayHint.background': TRANSPARENT,
-  'editorInlayHint.foreground': INLAYS,
+  'editorInlayHint.foreground': alpha(Colors.schemes[THEME].onSurface, 0.5),
 
   // --- Whitespace color
   'editorWhitespace.foreground': null, // Default gray color is muted enough 👍
@@ -393,8 +393,8 @@ const editor = {
   'editorCodeLens.foreground': alpha(Colors.schemes[THEME].tertiary, 0.5),
 
   // --- Bracket match
-  'editorBracketMatch.background': null,
-  'editorBracketMatch.border': Colors.schemes[THEME].tertiary,
+  'editorBracketMatch.background': alpha(Colors.schemes[THEME].secondaryContainer, 0.5),
+  'editorBracketMatch.border': TRANSPARENT,
 
   // --- Unused source code
   // (Ref: Create a fn with parameters that aren't used)
@@ -422,7 +422,7 @@ const editor = {
   // --- Snippets
   // Decorations show anytime a snippet with tabstops is triggered
   'editor.snippetTabstopHighlightBackground': alpha(PRIMARY, 0.1),
-  'editor.snippetTabstopHighlightBorder': Colors.schemes[THEME].primaryFixedDim,
+  'editor.snippetTabstopHighlightBorder': TRANSPARENT,
   'editor.snippetFinalTabstopHighlightBackground': alpha(PRIMARY, 0.1),
   'editor.snippetFinalTabstopHighlightBorder': Colors.schemes[THEME].primaryFixed,
 }
