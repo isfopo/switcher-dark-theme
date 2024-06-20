@@ -41,8 +41,8 @@ export const tokenColors = [
     // Highlight type assertions - TS "as"
     scope: 'keyword.control.as',
     settings: {
-      fontStyle: 'bold underline',
-      foreground: Colors.schemes[THEME].onSurface,
+      fontStyle: 'italic',
+      foreground: Colors.schemes[THEME].onSurfaceVariant,
     },
   },
   {
