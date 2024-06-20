@@ -115,11 +115,11 @@ const base = {
 //
 
 const text = {
-  'textBlockQuote.background': Colors.schemes[THEME].surfaceDim,
-  'textBlockQuote.border': Colors.schemes[THEME].surfaceDim,
+  'textBlockQuote.background': PRIMARY_BACKGROUND,
+  'textBlockQuote.border': PRIMARY_BACKGROUND,
   // Only showing inside of hover widget for code snippets (eg hover over chroma.hex())
   // It would be awesome if this showed inside READMEs code blocks...
-  'textCodeBlock.background': Colors.schemes[THEME].surfaceDim,
+  'textCodeBlock.background': PRIMARY_BACKGROUND,
   // Includes link hover state
   'textLink.foreground': SECONDARY,
   'textLink.activeForeground': SECONDARY_HOVER,
@@ -192,22 +192,22 @@ const progressBar = {
 
 const listsTrees = {
   // Mouse hover
-  'list.hoverBackground': alpha(PRIMARY, 0.05),
-  'list.hoverForeground': Colors.schemes[THEME].onPrimary,
+  'list.hoverBackground': alpha(SECONDARY, 0.05),
+  'list.hoverForeground': Colors.schemes[THEME].onSecondary,
   // Keyboard focus - using slightly higher alpha to make selection more obvious,
   // this helps UX for things like project and command dropdown selection with
   // the keyboard
-  'list.focusBackground': alpha(PRIMARY, 0.2),
-  'list.focusForeground': Colors.schemes[THEME].onPrimary,
+  'list.focusBackground': alpha(SECONDARY, 0.2),
+  'list.focusForeground': Colors.schemes[THEME].onSecondary,
   // Selected item when the list container is in focus
-  'list.activeSelectionBackground': alpha(PRIMARY, 0.1),
-  'list.activeSelectionForeground': Colors.schemes[THEME].onPrimary,
+  'list.activeSelectionBackground': alpha(SECONDARY, 0.1),
+  'list.activeSelectionForeground': Colors.schemes[THEME].onSecondary,
   // Selected item when the list container is NOT in focus. (Currently assuming
   // this really only applies to file explorer view, where having the last file
   // that was selected have a background is distracting, especially if you don't
   // have VSCode focus the file you're viewing when you change files)
   'list.inactiveSelectionBackground': PRIMARY_BACKGROUND,
-  'list.inactiveSelectionForeground': Colors.schemes[THEME].onPrimary,
+  'list.inactiveSelectionForeground': Colors.schemes[THEME].onSurface,
   // Focused item when the list container is NOT in focus
   'list.inactiveFocusBackground': null, // unknown
   // Drag and drop background, shows when you hover a drag item over a droppable area
