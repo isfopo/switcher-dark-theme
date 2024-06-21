@@ -33,7 +33,7 @@ const PRIMARY_BACKGROUND = Colors.schemes[THEME].surfaceContainerHigh
 // Semi-transparent widget background
 const BACKGROUND_WIDGET = alpha(PRIMARY_BACKGROUND, 0.9)
 // Drag and drop background for theme, used primarily in list views
-const BACKGROUND_DRAG_DROP = alpha(PRIMARY, 0.6)
+const BACKGROUND_DRAG_DROP = alpha(PRIMARY, transparency.DROP)
 
 // --- Borders
 
@@ -45,31 +45,30 @@ const HIGHLIGHT_CURRENT_LINE = Colors.schemes[THEME].tertiary
 const HIGHLIGHT_RANGE = Colors.schemes[THEME].tertiary
 const HIGHLIGHT_CURRENT_SELECTION = alpha(Colors.schemes[THEME].tertiary, 0.1)
 const HIGHLIGHT_MATCH = Colors.schemes[THEME].tertiary
-const HIGHLIGHT_ADDL_MATCH = Colors.schemes[THEME].tertiary
 const HIGHLIGHT_READ_ACCESS = Colors.schemes[THEME].tertiary
 const HIGHLIGHT_WRITE_ACCESS = Colors.schemes[THEME].tertiary
 
 // --- Git colors
 
-const DIFF_ADDED = '#ffffff'
-const DIFF_REMOVED = '#ffffff'
+const DIFF_ADDED = Colors.schemes[THEME].confirm
+const DIFF_REMOVED = Colors.schemes[THEME].error
 const MERGE_CURRENT = '#ffffff'
 const MERGE_INCOMING = '#ffffff'
 const MERGE_COMMON = '#ffffff'
 
-const GIT_ADDED = '#ffffff'
-const GIT_MODIFIED = '#ffffff'
-const GIT_DELETED = '#ffffff'
-const GIT_UNTRACKED = '#ffffff'
-const GIT_IGNORED = '#ffffff'
-const GIT_CONFLICTING = '#ffffff'
+const GIT_ADDED = Colors.schemes[THEME].confirm
+const GIT_MODIFIED = Colors.schemes[THEME].onSecondaryContainer
+const GIT_DELETED = Colors.schemes[THEME].error
+const GIT_UNTRACKED = alpha(Colors.schemes[THEME].onSurface, transparency.DISABLED)
+const GIT_IGNORED = alpha(Colors.schemes[THEME].onSurface, transparency.DISABLED)
+const GIT_CONFLICTING = Colors.schemes[THEME].error
 const GIT_SUBMODULE = '#ffffff'
 
 // --- Status colors
 
 const INFO = Colors.schemes[THEME].tertiary
-const WARNING = '#ffffff'
-const ERROR = Colors.schemes[THEME].error
+const WARNING = Colors.schemes[THEME].error
+const ERROR = Colors.schemes[THEME].errorContainer
 
 //
 // High contrast
@@ -286,10 +285,13 @@ const editor = {
   'editor.background': Colors.schemes[THEME].surfaceContainerHigh,
   // The editor default foreground shows up in widgets, is the color of the
   // separators in merge conflicts
-  'editor.foreground': Colors.schemes[THEME].onPrimary,
+  'editor.foreground': Colors.schemes[THEME].onSurface,
 
   // --- Line number colors
-  'editorLineNumber.foreground': Colors.schemes[THEME].onSurfaceVariant,
+  'editorLineNumber.foreground': alpha(
+    Colors.schemes[THEME].onSurface,
+    transparency.INACTIVE,
+  ),
   'editorLineNumber.activeForeground': Colors.schemes[THEME].onPrimaryContainer,
 
   // Editor highlighting (#highlighting)
@@ -309,7 +311,7 @@ const editor = {
   // match for find and currently selected symbol in Go to symbol. No border
   // because range highlight can match multiple lines for go to symbol and each
   'editor.rangeHighlightBackground': alpha(HIGHLIGHT_RANGE, 0.07),
-  'editor.rangeHighlightBorder': TRANSPARENT, // ETOOMUCHBORDER
+  'editor.rangeHighlightBorder': TRANSPARENT,
 
   // --- Current selection (#current_selection_highlight)
   // nb: The additional matches of the current selection highlight border is an
@@ -389,7 +391,10 @@ const editor = {
   'editorCodeLens.foreground': alpha(Colors.schemes[THEME].tertiary, 0.5),
 
   // --- Bracket match
-  'editorBracketMatch.background': alpha(Colors.schemes[THEME].secondaryContainer, 0.5),
+  'editorBracketMatch.background': alpha(
+    Colors.schemes[THEME].secondaryContainer,
+    transparency.INACTIVE,
+  ),
   'editorBracketMatch.border': TRANSPARENT,
 
   // --- Unused source code
@@ -397,7 +402,10 @@ const editor = {
   // Dim opacity on unused code, but don't add a border as this is often done by
   // linters and we don't want to double up
   'editorUnnecessaryCode.border': null,
-  'editorUnnecessaryCode.opacity': '#0000006e',
+  'editorUnnecessaryCode.opacity': alpha(
+    Colors.schemes[THEME].onSurface,
+    transparency.DISABLED,
+  ),
 
   // --- Gutter colors
   'editorGutter.background': null, // Defaults to editor bg

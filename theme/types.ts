@@ -84,6 +84,10 @@ export interface Scheme {
   onError: string
   errorContainer: string
   onErrorContainer: string
+  confirm: string
+  onConfirm: string
+  confirmContainer: string
+  onConfirmContainer: string
   background: string
   onBackground: string
   surface: string
