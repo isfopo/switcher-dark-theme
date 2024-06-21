@@ -183,33 +183,36 @@ const progressBar = {
 const listsTrees = {
   // Mouse hover
   'list.hoverBackground': alpha(Colors.schemes[THEME].secondary, 0.05),
-  'list.hoverForeground': Colors.schemes[THEME].onSecondary,
+  'list.hoverForeground': Colors.schemes[THEME].onSecondaryContainer,
   // Keyboard focus - using slightly higher alpha to make selection more obvious,
   // this helps UX for things like project and command dropdown selection with
   // the keyboard
   'list.focusBackground': alpha(Colors.schemes[THEME].secondary, 0.2),
-  'list.focusForeground': Colors.schemes[THEME].onSecondary,
+  'list.focusForeground': Colors.schemes[THEME].onSecondaryContainer,
   // Selected item when the list container is in focus
   'list.activeSelectionBackground': alpha(Colors.schemes[THEME].secondary, 0.1),
-  'list.activeSelectionForeground': Colors.schemes[THEME].onSecondary,
+  'list.activeSelectionForeground': Colors.schemes[THEME].onSecondaryContainer,
   // Selected item when the list container is NOT in focus. (Currently assuming
   // this really only applies to file explorer view, where having the last file
   // that was selected have a background is distracting, especially if you don't
   // have VSCode focus the file you're viewing when you change files)
-  'list.inactiveSelectionBackground': PRIMARY_BACKGROUND,
+  'list.inactiveSelectionBackground': Colors.schemes[THEME].surfaceContainer,
   'list.inactiveSelectionForeground': Colors.schemes[THEME].onSurface,
   // Focused item when the list container is NOT in focus
   'list.inactiveFocusBackground': null, // unknown
   // Drag and drop background, shows when you hover a drag item over a droppable area
-  'list.dropBackground': Colors.schemes[THEME].surfaceContainerHighest,
+  'list.dropBackground': alpha(
+    Colors.schemes[THEME].secondaryContainer,
+    transparency.DROP,
+  ),
   // The text that matches a search term inside of lists
-  'list.highlightForeground': Colors.schemes[THEME].onPrimary,
+  'list.highlightForeground': Colors.schemes[THEME].onSecondaryContainer,
   'list.errorForeground': ERROR,
   'list.warningForeground': WARNING,
   'list.invalidItemForeground': null,
 
   // Vertical lines in tree view shown for open directories
-  'tree.indentGuidesStroke': alpha(Colors.schemes[THEME].secondary, 0.5),
+  'tree.indentGuidesStroke': alpha(Colors.schemes[THEME].secondary, transparency.GUIDES),
 }
 
 //
@@ -220,14 +223,21 @@ const input = {
   'input.background': Colors.schemes[THEME].surfaceContainerHighest,
   'input.border': TRANSPARENT,
   'input.foreground': Colors.schemes[THEME].onSurface,
-  'input.placeholderForeground': Colors.schemes[THEME].onSurface,
+  'input.placeholderForeground': alpha(
+    Colors.schemes[THEME].onSurface,
+    transparency.DISABLED,
+  ),
   // The controls inside of the input for setting search constraints
   'inputOption.activeBorder': TRANSPARENT,
-  'inputOption.activeBackground': alpha(PRIMARY, 0.15),
-  'inputValidation.errorBackground': ERROR,
-  'inputValidation.errorBorder': ERROR,
-  'inputValidation.infoBackground': INFO,
-  'inputValidation.infoBorder': INFO,
+  'inputOption.activeBackground': alpha(
+    Colors.schemes[THEME].secondary,
+    transparency.BACKGROUND_HOVER,
+  ),
+  'inputValidation.errorBackground': Colors.schemes[THEME].error,
+  'inputValidation.errorForeground': Colors.schemes[THEME].onError,
+  'inputValidation.errorBorder': TRANSPARENT,
+  'inputValidation.infoBackground': Colors.schemes[THEME].tertiaryContainer,
+  'inputValidation.infoBorder': TRANSPARENT,
   'inputValidation.warningBackground': WARNING,
   'inputValidation.warningBorder': WARNING,
 }
@@ -239,17 +249,12 @@ const input = {
 // Editor groups contain editor instances, and each editor instance is
 // represented by a tab
 const editorGroup = {
-  // Border applies to multiple editor groups
-  'editorGroup.border': TRANSPARENT,
+  'editorGroup.border': alpha(Colors.schemes[THEME].secondary, transparency.BORDER),
   'editorGroup.dropBackground': BACKGROUND_DRAG_DROP,
-  // When all tabs are closed the editorGroup is empty, you would see this on
-  // opening VSCode without a previous project, eg cmd+shift+n
   'editorGroup.emptyBackground': Colors.schemes[THEME].surfaceContainer,
   'editorGroup.focusedEmptyBorder': TRANSPARENT,
-  // If you're not using tabs, show regular background, can't think of a better
-  // color for that display
   'editorGroupHeader.noTabsBackground': Colors.schemes[THEME].surfaceContainer,
-  'editorGroupHeader.tabsBackground': Colors.schemes[THEME].surfaceContainerHigh,
+  'editorGroupHeader.tabsBackground': Colors.schemes[THEME].surfaceContainer,
   'editorGroupHeader.tabsBorder': TRANSPARENT,
   'editorGroupHeader.border': TRANSPARENT,
 }
@@ -540,7 +545,7 @@ const panel = {
 // Contains the Explore/Debug/Extension/etc. views
 const sideBar = {
   'sideBar.background': Colors.schemes[THEME].surfaceContainer,
-  'sideBar.foreground': Colors.schemes[THEME].onSurface,
+  'sideBar.foreground': Colors.schemes[THEME].onSurfaceVariant,
   'sideBar.border': BORDERS,
   'sideBar.dropBackground': Colors.schemes[THEME].secondary,
   // The title for the entire side bar, eg 'EXPLORER' or 'DEBUG'
@@ -549,6 +554,7 @@ const sideBar = {
   'sideBarSectionHeader.background': Colors.schemes[THEME].surfaceContainer, // same bg for subtler headers
   'sideBarSectionHeader.foreground': Colors.schemes[THEME].onSurface,
   'sideBarSectionHeader.border': TRANSPARENT,
+  'sideBarStickyScroll.border': TRANSPARENT,
 }
 
 //
@@ -570,7 +576,7 @@ const statusBar = {
   'statusBar.noFolderBorder': Colors.schemes[THEME].onSecondary,
   // ℹ️ You can only style the background of status bar items
   'statusBarItem.prominentBackground': Colors.schemes[THEME].onSecondary,
-  'statusBarItem.prominentHoverBackground': Colors.schemes[THEME].onPrimaryFixedVariant,
+  'statusBarItem.prominentHoverBackground': Colors.schemes[THEME].onSecondaryFixedVariant,
   'statusBarItem.hoverBackground': alpha(
     Colors.schemes[THEME].secondary,
     transparency.BACKGROUND_HOVER,

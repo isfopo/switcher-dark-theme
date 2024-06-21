@@ -10,6 +10,7 @@ export const transparency = {
   BACKGROUND: 0.1,
   BACKGROUND_HOVER: 0.2,
   INACTIVE: 0.6,
+  GUIDES: 0.5,
 }
 
 export const Colors: Theme = {
