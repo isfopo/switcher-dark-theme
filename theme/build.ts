@@ -8,6 +8,7 @@ import { extensions } from './languages/extensions'
 import { html } from './languages/html'
 import { javascript } from './languages/javascript'
 import { json } from './languages/json'
+import { markdown } from './languages/markdown'
 import { react } from './languages/react'
 import { yaml } from './languages/yaml'
 
@@ -24,9 +25,9 @@ const theme = {
     ...extensions,
     // ...go,
     ...html,
-    // ...markdown,
     ...javascript,
     ...json,
+    ...markdown,
     ...react,
     ...yaml,
   ],

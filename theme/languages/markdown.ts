@@ -1,4 +1,5 @@
-import { token } from '../utils'
+import { Colors, THEME, transparency } from '../colors'
+import { alpha, token } from '../utils'
 
 /**
  * TODO
@@ -8,42 +9,63 @@ import { token } from '../utils'
  */
 export const markdown = [
   // Base color
-  token('meta.paragraph.markdown', '#bccfcf'),
+  token('meta.paragraph.markdown', Colors.schemes[THEME].onSurface),
 
   // Code comments
-  token('comment.block.html', '#48676A'),
+  token('comment.block.html', Colors.schemes[THEME].onSurfaceVariant),
 
   // Headers
-  token('entity.name.section.markdown', '#ffdfee', 'bold'), // # punctuation
-  token('punctuation.definition.heading.markdown', '#a8ffdb', 'bold'), // text
+  token('entity.name.section.markdown', Colors.schemes[THEME].onPrimaryContainer, 'bold'),
+  token(
+    'punctuation.definition.heading.markdown',
+    Colors.schemes[THEME].onPrimaryContainer,
+    'bold',
+  ),
 
   // Code block
-  token('markup.inline.raw.string.markdown', '#ff96aa'), // ` punctuation
-  token('punctuation.definition.raw.markdown', '#ffdfee'), // text
+  token('markup.inline.raw.string.markdown', Colors.schemes[THEME].onTertiaryContainer), // ` punctuation
+  token('punctuation.definition.raw.markdown', Colors.schemes[THEME].onTertiaryContainer), // text
 
   // Fenced code block (w/out syntax)
-  token('markup.fenced_code.block.markdown', '#74A39D'),
+  token(
+    'markup.fenced_code.block.markdown',
+    alpha(Colors.schemes[THEME].onTertiaryContainer, transparency.TEXT),
+  ),
 
   // Horizontal rule
-  token('meta.separator.markdown', '#999EE1'),
+  token('meta.separator.markdown', Colors.schemes[THEME].onSurfaceVariant),
 
   // Anchors
-  token('meta.link.inline.markdown', '#9ceeeb'), // base anchor color
-  token('markup.underline.link', '#a8ffefad', 'italic'), // link href
-  token('meta.link.inline.markdown punctuation.definition.string', '#5af5f0'), // []
+  token('meta.link.inline.markdown', Colors.schemes[THEME].primary), // base anchor color
+  token('markup.underline.link', Colors.schemes[THEME].primary, 'italic'), // link href
+  token(
+    'meta.link.inline.markdown punctuation.definition.string',
+    Colors.schemes[THEME].primary,
+  ), // []
 
   // Anchor definitions
-  token('constant.other.reference.link', '#9ceeeb'), // text
-  token('meta.link.reference.def markup.underline.link', '#74A39D', 'italic'), // link href
-  token('meta.link.reference.def punctuation.definition.constant', '#75fffaad'), // []
+  token('constant.other.reference.link', Colors.schemes[THEME].primary), // text
+  token(
+    'meta.link.reference.def markup.underline.link',
+    Colors.schemes[THEME].primary,
+    'italic',
+  ), // link href
+  token(
+    'meta.link.reference.def punctuation.definition.constant',
+    Colors.schemes[THEME].primary,
+  ), // []
 
   // Lists
-  token('punctuation.definition.list.begin', '#a8ffdbad'),
+  token('punctuation.definition.list.begin', Colors.schemes[THEME].onPrimaryContainer),
 
   // Bold
-  token('markup.bold.markdown', '#74A39D', 'bold'),
+  token('markup.bold.markdown', Colors.schemes[THEME].onSecondaryContainer, 'bold'),
 
   // Italic
-  token('markup.italic.markdown', '#abdada', 'italic'),
-  token('markup.italic.markdown punctuation.definition', '#abdada', 'italic'),
+  token('markup.italic.markdown', Colors.schemes[THEME].onSecondaryContainer, 'italic'),
+  token(
+    'markup.italic.markdown punctuation.definition',
+    Colors.schemes[THEME].onSecondaryContainer,
+    'italic',
+  ),
 ]

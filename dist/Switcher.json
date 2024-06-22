@@ -485,6 +485,121 @@
       }
     },
     {
+      "scope": "meta.paragraph.markdown",
+      "settings": {
+        "foreground": "#DFE3E7"
+      }
+    },
+    {
+      "scope": "comment.block.html",
+      "settings": {
+        "foreground": "#BFC8CC"
+      }
+    },
+    {
+      "scope": "entity.name.section.markdown",
+      "settings": {
+        "foreground": "#FFDBD0",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "punctuation.definition.heading.markdown",
+      "settings": {
+        "foreground": "#FFDBD0",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "markup.inline.raw.string.markdown",
+      "settings": {
+        "foreground": "#9CF1F3"
+      }
+    },
+    {
+      "scope": "punctuation.definition.raw.markdown",
+      "settings": {
+        "foreground": "#9CF1F3"
+      }
+    },
+    {
+      "scope": "markup.fenced_code.block.markdown",
+      "settings": {
+        "foreground": "#9cf1f366"
+      }
+    },
+    {
+      "scope": "meta.separator.markdown",
+      "settings": {
+        "foreground": "#BFC8CC"
+      }
+    },
+    {
+      "scope": "meta.link.inline.markdown",
+      "settings": {
+        "foreground": "#FFB59F"
+      }
+    },
+    {
+      "scope": "markup.underline.link",
+      "settings": {
+        "foreground": "#FFB59F",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "meta.link.inline.markdown punctuation.definition.string",
+      "settings": {
+        "foreground": "#FFB59F"
+      }
+    },
+    {
+      "scope": "constant.other.reference.link",
+      "settings": {
+        "foreground": "#FFB59F"
+      }
+    },
+    {
+      "scope": "meta.link.reference.def markup.underline.link",
+      "settings": {
+        "foreground": "#FFB59F",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "meta.link.reference.def punctuation.definition.constant",
+      "settings": {
+        "foreground": "#FFB59F"
+      }
+    },
+    {
+      "scope": "punctuation.definition.list.begin",
+      "settings": {
+        "foreground": "#FFDBD0"
+      }
+    },
+    {
+      "scope": "markup.bold.markdown",
+      "settings": {
+        "foreground": "#C0E8FF",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "markup.italic.markdown",
+      "settings": {
+        "foreground": "#C0E8FF",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "markup.italic.markdown punctuation.definition",
+      "settings": {
+        "foreground": "#C0E8FF",
+        "fontStyle": "italic"
+      }
+    },
+    {
       "scope": "support.class.component",
       "settings": {
         "foreground": "#FFDBD0",
