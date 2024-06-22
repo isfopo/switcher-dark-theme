@@ -5,6 +5,7 @@ import { tokenColors } from './colors-tokens'
 import { workbenchColors } from './colors-workbench'
 import { comment } from './languages/comment'
 import { extensions } from './languages/extensions'
+import { javascript } from './languages/javascript'
 import { react } from './languages/react'
 import { yaml } from './languages/yaml'
 
@@ -21,7 +22,7 @@ const theme = {
     // ...go,
     // ...html,
     // ...markdown,
-    // ...javascript,
+    ...javascript,
     // ...json,
     ...react,
     ...yaml,

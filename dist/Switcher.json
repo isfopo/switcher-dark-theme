@@ -399,6 +399,62 @@
       }
     },
     {
+      "scope": "constant.language.boolean",
+      "settings": {
+        "foreground": "#9CF1F3"
+      }
+    },
+    {
+      "scope": "constant.language.null",
+      "settings": {
+        "foreground": "#FFB4AB"
+      }
+    },
+    {
+      "scope": "keyword.control.flow",
+      "settings": {
+        "foreground": "#9CF1F3",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "keyword.control.export",
+      "settings": {
+        "foreground": "#9CF1F3"
+      }
+    },
+    {
+      "scope": "keyword.control.import, keyword.control.from",
+      "settings": {
+        "foreground": "#BFC8CC"
+      }
+    },
+    {
+      "scope": "keyword.operator",
+      "settings": {
+        "foreground": "#BFC8CC",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "storage.type.function",
+      "settings": {
+        "foreground": "#FFDBD0"
+      }
+    },
+    {
+      "scope": "storage.type.function.arrow",
+      "settings": {
+        "foreground": "#FFDBD0"
+      }
+    },
+    {
+      "scope": "string.template",
+      "settings": {
+        "foreground": "#FFB59F"
+      }
+    },
+    {
       "scope": "support.class.component",
       "settings": {
         "foreground": "#FFDBD0",

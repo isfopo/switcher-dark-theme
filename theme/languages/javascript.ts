@@ -1,3 +1,4 @@
+import { Colors, THEME } from '../colors'
 import { token } from '../utils'
 
 export const javascript = [
@@ -5,42 +6,36 @@ export const javascript = [
   // Constants
 
   // Boolean values, eg: true
-  token('constant.language.boolean', CHARTREUSES[300]),
+  token('constant.language.boolean', Colors.schemes[THEME].onTertiaryContainer),
 
   // Null values, eg: null
-  token('constant.language.null', CHARTREUSES[200]),
-
-  // --------------------------------------------------------
-  // Functions
-
-  // called functions, eg log in: console.log
-  token('entity.name.function', BLUES[150]),
+  token('constant.language.null', Colors.schemes[THEME].error),
 
   // --------------------------------------------------------
   // Keywords
 
   // keywords, eg: return, if
-  // ⓘ matches go token 'keyword.control'
-  token('keyword.control.flow', PINKS[600]),
+  token('keyword.control.flow', Colors.schemes[THEME].onTertiaryContainer, 'bold'),
 
   // export keyword
-  token('keyword.control.export', PINKS[600]),
+  token('keyword.control.export', Colors.schemes[THEME].onTertiaryContainer),
 
   // keywords import and from in: import someModule from 'some-module'
-  token('keyword.control.import, keyword.control.from', PINKS[400]),
+  token(
+    'keyword.control.import, keyword.control.from',
+    Colors.schemes[THEME].onSurfaceVariant,
+  ),
 
   // operators, eg = in: const rad = 'radical', ===
-  token('keyword.operator', PINKS[200]),
+  token('keyword.operator', Colors.schemes[THEME].onSurfaceVariant, 'bold'),
 
   // function in: function radical () {}
-  token('storage.type.function', PINKS[500]),
-
-  // this is PINKS[500] bc of storage.type.function which is too bright, reset to match keyword.operator
-  token('storage.type.function.arrow', PINKS[200]),
+  token('storage.type.function', Colors.schemes[THEME].onPrimaryContainer),
+  token('storage.type.function.arrow', Colors.schemes[THEME].onPrimaryContainer),
 
   // --------------------------------------------------------
   // Strings
 
   // Template strings, eg: `radical-${status}`
-  token('string.template', TEALS[200]),
+  token('string.template', Colors.schemes[THEME].primary),
 ]
