@@ -4,6 +4,7 @@ export type FontStyle =
   | 'underline'
   | 'italic bold'
   | 'italic bold underline'
+  | ''
 
 export interface Theme {
   seed: string

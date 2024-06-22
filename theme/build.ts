@@ -7,6 +7,7 @@ import { comment } from './languages/comment'
 import { extensions } from './languages/extensions'
 import { html } from './languages/html'
 import { javascript } from './languages/javascript'
+import { json } from './languages/json'
 import { react } from './languages/react'
 import { yaml } from './languages/yaml'
 
@@ -20,14 +21,14 @@ const theme = {
   tokenColors: [
     ...tokenColors,
     ...comment,
+    ...extensions,
     // ...go,
     ...html,
     // ...markdown,
     ...javascript,
-    // ...json,
+    ...json,
     ...react,
     ...yaml,
-    ...extensions,
   ],
 } as const
 

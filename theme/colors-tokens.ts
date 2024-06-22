@@ -33,7 +33,6 @@ export const tokenColors = [
     // General type match
     scope: 'support.type',
     settings: {
-      fontStyle: 'italic',
       foreground: Colors.schemes[THEME].primary,
     },
   },
