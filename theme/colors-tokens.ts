@@ -23,10 +23,10 @@ export const tokenColors = [
   token('markup', Colors.schemes[THEME].onSurface),
   // Includes variable declarations
   token('storage', Colors.schemes[THEME].onSurface),
-  token('string', Colors.schemes[THEME].onSurface),
+  token('string', Colors.schemes[THEME].tertiary, 'italic'),
   // Support is meant to be things provided by external frameworks or libraries
   token('support', Colors.schemes[THEME].onSurface),
-  token('variable', Colors.schemes[THEME].onSurface),
+  token('variable', Colors.schemes[THEME].onPrimaryContainer, 'bold'),
 
   // --- TYPES
   {
@@ -34,7 +34,7 @@ export const tokenColors = [
     scope: 'support.type',
     settings: {
       fontStyle: 'italic',
-      foreground: Colors.schemes[THEME].onSurface,
+      foreground: Colors.schemes[THEME].primary,
     },
   },
   {
@@ -49,7 +49,8 @@ export const tokenColors = [
     // TS function assertions
     scope: 'keyword.operator.type.asserts, keyword.operator.expression.is',
     settings: {
-      foreground: Colors.schemes[THEME].onSurface,
+      foreground: Colors.schemes[THEME].primary,
+      fontStyle: 'italic',
     },
   },
   {

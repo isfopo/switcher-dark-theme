@@ -5,6 +5,7 @@ import { tokenColors } from './colors-tokens'
 import { workbenchColors } from './colors-workbench'
 import { comment } from './languages/comment'
 import { extensions } from './languages/extensions'
+import { react } from './languages/react'
 import { yaml } from './languages/yaml'
 
 const theme = {
@@ -22,7 +23,7 @@ const theme = {
     // ...markdown,
     // ...javascript,
     // ...json,
-    // ...react,
+    ...react,
     ...yaml,
     ...extensions,
   ],

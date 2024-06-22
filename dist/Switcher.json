@@ -89,9 +89,9 @@
     "editorGroupHeader.tabsBackground": "#1B2023",
     "editorGroupHeader.tabsBorder": "#0000",
     "editorGroupHeader.border": "#0000",
-    "editorBracketHighlight.foreground1": "#FFB59F",
-    "editorBracketHighlight.foreground2": "#8CCFF1",
-    "editorBracketHighlight.foreground3": "#80D4D7",
+    "editorBracketHighlight.foreground1": "#FFDBD0",
+    "editorBracketHighlight.foreground2": "#C0E8FF",
+    "editorBracketHighlight.foreground3": "#9CF1F3",
     "editorBracketHighlight.foreground4": "#F37022",
     "editorBracketMatch.background": "#004d6699",
     "editorBracketMatch.border": "#0000",
@@ -322,7 +322,8 @@
     {
       "scope": "string",
       "settings": {
-        "foreground": "#DFE3E7"
+        "foreground": "#80D4D7",
+        "fontStyle": "italic"
       }
     },
     {
@@ -334,14 +335,15 @@
     {
       "scope": "variable",
       "settings": {
-        "foreground": "#DFE3E7"
+        "foreground": "#FFDBD0",
+        "fontStyle": "bold"
       }
     },
     {
       "scope": "support.type",
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#DFE3E7"
+        "foreground": "#FFB59F"
       }
     },
     {
@@ -354,7 +356,8 @@
     {
       "scope": "keyword.operator.type.asserts, keyword.operator.expression.is",
       "settings": {
-        "foreground": "#DFE3E7"
+        "foreground": "#FFB59F",
+        "fontStyle": "italic"
       }
     },
     {
@@ -393,6 +396,32 @@
       "scope": "variable.other.jsdoc",
       "settings": {
         "foreground": "#c0e8ff66"
+      }
+    },
+    {
+      "scope": "support.class.component",
+      "settings": {
+        "foreground": "#FFDBD0",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "#FFDBD0"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name",
+      "settings": {
+        "foreground": "#8CCFF1",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "punctuation.definition.tag",
+      "settings": {
+        "foreground": "#FFDBD0"
       }
     },
     {
