@@ -1,5 +1,5 @@
-import { Colors, THEME } from './colors'
-import { token } from './utils'
+import { Colors, THEME, transparency } from './colors'
+import { alpha, token } from './utils'
 
 // The generic syntax tokens are themed here according to the Textmate naming
 // convention and the package color semantics.
@@ -11,14 +11,14 @@ import { token } from './utils'
 
 export const tokenColors = [
   // ℹ️ No color for generic <meta>, see naming conventions for details
-  token('comment', Colors.schemes[THEME].onSurface, 'italic'),
+  token('comment', alpha(Colors.schemes[THEME].onSurface, transparency.TEXT), 'italic'),
   // Booleans are constants (Uppercase "constants" are actually variables)
-  token('constant', Colors.schemes[THEME].onSurface),
-  // Entities end up being a lot of things, most noticably class names, method names
-  token('entity', Colors.schemes[THEME].onSurface),
-  token('invalid', Colors.schemes[THEME].onSurface, 'italic bold underline'),
+  token('constant', Colors.schemes[THEME].onPrimaryContainer),
+  // Entities end up being a lot of things, most noticeably class names, method names
+  token('entity', Colors.schemes[THEME].secondary, 'bold'),
+  token('invalid', Colors.schemes[THEME].onErrorContainer, 'italic bold underline'),
   // Language keywords like `export` or `return`
-  token('keyword', Colors.schemes[THEME].onSurface),
+  token('keyword', Colors.schemes[THEME].primary),
   // Generic for markup content
   token('markup', Colors.schemes[THEME].onSurface),
   // Includes variable declarations
@@ -56,7 +56,7 @@ export const tokenColors = [
     // Named types - covers type aliases, interfaces, and parameters
     scope: 'entity.name.type',
     settings: {
-      foreground: Colors.schemes[THEME].onSurface,
+      foreground: Colors.schemes[THEME].onPrimaryContainer,
       fontStyle: 'italic',
     },
   },

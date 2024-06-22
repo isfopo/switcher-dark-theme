@@ -4,6 +4,7 @@ import path from 'node:path'
 import { tokenColors } from './colors-tokens'
 import { workbenchColors } from './colors-workbench'
 import { comment } from './languages/comment'
+import { extensions } from './languages/extensions'
 import { yaml } from './languages/yaml'
 
 const theme = {
@@ -23,6 +24,7 @@ const theme = {
     // ...json,
     // ...react,
     ...yaml,
+    ...extensions,
   ],
 } as const
 

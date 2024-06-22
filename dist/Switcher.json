@@ -273,33 +273,34 @@
     {
       "scope": "comment",
       "settings": {
-        "foreground": "#DFE3E7",
+        "foreground": "#dfe3e766",
         "fontStyle": "italic"
       }
     },
     {
       "scope": "constant",
       "settings": {
-        "foreground": "#DFE3E7"
+        "foreground": "#FFDBD0"
       }
     },
     {
       "scope": "entity",
       "settings": {
-        "foreground": "#DFE3E7"
+        "foreground": "#8CCFF1",
+        "fontStyle": "bold"
       }
     },
     {
       "scope": "invalid",
       "settings": {
-        "foreground": "#DFE3E7",
+        "foreground": "#FFDAD6",
         "fontStyle": "italic bold underline"
       }
     },
     {
       "scope": "keyword",
       "settings": {
-        "foreground": "#DFE3E7"
+        "foreground": "#FFB59F"
       }
     },
     {
@@ -355,7 +356,7 @@
     {
       "scope": "entity.name.type",
       "settings": {
-        "foreground": "#DFE3E7",
+        "foreground": "#FFDBD0",
         "fontStyle": "italic"
       }
     },
@@ -407,6 +408,11 @@
       "settings": {
         "foreground": "#9CF1F3"
       }
+    },
+    {
+      "bracket-pair-colorizer-2.colors": [
+        "#ffffff"
+      ]
     }
   ]
 }
