@@ -390,13 +390,6 @@ const editor = {
   // --- Code lens
   'editorCodeLens.foreground': alpha(Colors.schemes[THEME].tertiary, 0.5),
 
-  // --- Bracket match
-  'editorBracketMatch.background': alpha(
-    Colors.schemes[THEME].secondaryContainer,
-    transparency.INACTIVE,
-  ),
-  'editorBracketMatch.border': TRANSPARENT,
-
   // --- Unused source code
   // (Ref: Create a fn with parameters that aren't used)
   // Dim opacity on unused code, but don't add a border as this is often done by
@@ -429,6 +422,18 @@ const editor = {
   'editor.snippetTabstopHighlightBorder': TRANSPARENT,
   'editor.snippetFinalTabstopHighlightBackground': alpha(PRIMARY, 0.1),
   'editor.snippetFinalTabstopHighlightBorder': Colors.schemes[THEME].primaryFixed,
+}
+
+const brackets = {
+  'editorBracketHighlight.foreground1': Colors.schemes[THEME].onPrimaryContainer,
+  'editorBracketHighlight.foreground2': Colors.schemes[THEME].onSecondaryContainer,
+  'editorBracketHighlight.foreground3': Colors.schemes[THEME].onTertiaryContainer,
+  'editorBracketHighlight.foreground4': Colors.extendedColors[0].color,
+  'editorBracketMatch.background': alpha(
+    Colors.schemes[THEME].secondaryContainer,
+    transparency.INACTIVE,
+  ),
+  'editorBracketMatch.border': TRANSPARENT,
 }
 
 // Overview ruler - located beneath scroll bar on right edge of editor and contains an
@@ -801,6 +806,7 @@ export const workbenchColors = {
   ...dropdown,
   ...editor,
   ...editorGroup,
+  ...brackets,
   ...editorOverviewRuler,
   ...editorWidget,
   ...minimap,
