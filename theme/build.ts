@@ -3,6 +3,8 @@ import path from 'node:path'
 
 import { tokenColors } from './colors-tokens'
 import { workbenchColors } from './colors-workbench'
+import { comment } from './languages/comment'
+import { yaml } from './languages/yaml'
 
 const theme = {
   $schema: 'vscode://schemas/color-theme',
@@ -13,14 +15,14 @@ const theme = {
   colors: workbenchColors,
   tokenColors: [
     ...tokenColors,
-    // ...comment,
+    ...comment,
     // ...go,
     // ...html,
     // ...markdown,
     // ...javascript,
     // ...json,
     // ...react,
-    // ...yaml,
+    ...yaml,
   ],
 } as const
 

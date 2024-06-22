@@ -33,7 +33,7 @@ const PRIMARY_BACKGROUND = Colors.schemes[THEME].surfaceContainerHigh
 // Semi-transparent widget background
 const BACKGROUND_WIDGET = alpha(PRIMARY_BACKGROUND, 0.9)
 // Drag and drop background for theme, used primarily in list views
-const BACKGROUND_DRAG_DROP = alpha(PRIMARY, transparency.DROP)
+const BACKGROUND_DRAG_DROP = alpha(Colors.schemes[THEME].surfaceTint, transparency.DROP)
 
 // --- Borders
 
