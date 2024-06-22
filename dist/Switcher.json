@@ -399,6 +399,18 @@
       }
     },
     {
+      "scope": "punctuation.separator.key-value.html",
+      "settings": {
+        "foreground": "#8CCFF1"
+      }
+    },
+    {
+      "scope": "meta.tag.structure.any.html, meta.tag.inline.any.html",
+      "settings": {
+        "foreground": "#FFB59F"
+      }
+    },
+    {
       "scope": "constant.language.boolean",
       "settings": {
         "foreground": "#9CF1F3"
@@ -478,6 +490,12 @@
       "scope": "punctuation.definition.tag",
       "settings": {
         "foreground": "#FFDBD0"
+      }
+    },
+    {
+      "scope": "keyword.operator.assignment.tsx",
+      "settings": {
+        "foreground": "#8CCFF1"
       }
     },
     {

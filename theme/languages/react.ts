@@ -13,4 +13,7 @@ export const react = [
 
   // JSX tags punctuation, eg: </
   token('punctuation.definition.tag', Colors.schemes[THEME].onPrimaryContainer),
+
+  // Match pink "=" from HTML for JSX attributes
+  token('keyword.operator.assignment.tsx', Colors.schemes[THEME].secondary),
 ]
