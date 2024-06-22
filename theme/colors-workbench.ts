@@ -752,34 +752,34 @@ const terminal = {
   // Border between multiple terminals
   'terminal.border': TRANSPARENT,
 
-  'terminal.selectionBackground': '#874df84d',
+  'terminal.selectionBackground': HIGHLIGHT_CURRENT_SELECTION,
 
-  'terminalCursor.background': '#ff428e',
-  'terminalCursor.foreground': '#defff7',
+  'terminalCursor.background': Colors.schemes[THEME].secondaryContainer,
+  'terminalCursor.foreground': Colors.schemes[THEME].onSecondaryContainer,
 
-  'terminal.ansiBlack': '#30317D',
-  'terminal.ansiBrightBlack': '#391AB5',
+  'terminal.ansiBlack': Colors.schemes[THEME].surface,
+  'terminal.ansiBrightBlack': Colors.schemes[THEME].surfaceBright,
 
-  'terminal.ansiBlue': '#7DD9E4',
-  'terminal.ansiBrightBlue': '#84F9FE',
+  'terminal.ansiBlue': Colors.schemes[THEME].secondary,
+  'terminal.ansiBrightBlue': Colors.schemes[THEME].onSecondaryContainer,
 
   'terminal.ansiMagenta': '#fa61b8',
   'terminal.ansiBrightMagenta': '#d5358f',
 
-  'terminal.ansiRed': '#FF5395',
-  'terminal.ansiBrightRed': '#FF427B',
+  'terminal.ansiRed': Colors.schemes[THEME].error,
+  'terminal.ansiBrightRed': Colors.schemes[THEME].onErrorContainer,
 
-  'terminal.ansiGreen': '#D8FF4E',
-  'terminal.ansiBrightGreen': '#C8FF00',
+  'terminal.ansiGreen': Colors.schemes[THEME].tertiary,
+  'terminal.ansiBrightGreen': Colors.schemes[THEME].onTertiaryContainer,
 
   'terminal.ansiYellow': '#FFFC7E',
   'terminal.ansiBrightYellow': '#F8D846',
 
-  'terminal.ansiCyan': '#A8FFEF',
-  'terminal.ansiBrightCyan': '#83FEE8',
+  'terminal.ansiCyan': Colors.schemes[THEME].tertiary,
+  'terminal.ansiBrightCyan': Colors.schemes[THEME].onTertiaryContainer,
 
-  'terminal.ansiWhite': '#cff0e8',
-  'terminal.ansiBrightWhite': '#cbfff2',
+  'terminal.ansiWhite': Colors.schemes[THEME].onSurfaceVariant,
+  'terminal.ansiBrightWhite': Colors.schemes[THEME].onSurface,
 }
 
 //
