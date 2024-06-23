@@ -381,7 +381,7 @@ const editor = {
 
   // --- Indent guides
   'editorIndentGuide.background': null, // Default gray color is muted enough 👍
-  'editorIndentGuide.activeBackground': BACKGROUND_DRAG_DROP, // Mirror rulers
+  'editorIndentGuide.activeBackground1': BACKGROUND_DRAG_DROP, // Mirror rulers
 
   // --- Ruler color
   'editorRuler.foreground': BACKGROUND_DRAG_DROP,
@@ -519,7 +519,6 @@ const peekView = {
 const activityBar = {
   'activityBar.background': Colors.schemes[THEME].surfaceContainerLow,
   'activityBar.foreground': Colors.schemes[THEME].secondary,
-  'activityBar.dropBackground': BACKGROUND_DRAG_DROP,
   'activityBar.border': TRANSPARENT,
   'activityBar.inactiveForeground': alpha(
     Colors.schemes[THEME].secondary,
@@ -540,7 +539,6 @@ const activityBar = {
 const panel = {
   'panel.background': Colors.schemes[THEME].surfaceContainerHigh,
   'panel.border': alpha(Colors.schemes[THEME].secondary, transparency.BORDER),
-  'panel.dropBackground': Colors.schemes[THEME].secondary,
   // Panel title
   'panelTitle.activeBorder': alpha(Colors.schemes[THEME].secondary, transparency.BORDER),
   'panelTitle.activeForeground': Colors.schemes[THEME].onSurface,
@@ -646,8 +644,6 @@ const quickInput = {
   // file, go to symbol, etc.
   'quickInput.background': BACKGROUND_WIDGET,
   'quickInput.foreground': Colors.schemes[THEME].onSurface,
-  // 'quickInputTitle.background' ???
-  'quickInput.list.focusBackground': alpha(PRIMARY, 0.2),
 }
 
 //
@@ -720,8 +716,6 @@ const debug = {
 //
 
 const welcomePage = {
-  'welcomePage.buttonBackground': Colors.schemes[THEME].surfaceBright,
-  'welcomePage.buttonHoverBackground': Colors.schemes[THEME].surfaceDim,
   'walkThrough.embeddedEditorBackground': Colors.schemes[THEME].surface,
 }
 
