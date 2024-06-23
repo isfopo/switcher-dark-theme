@@ -459,7 +459,7 @@ const editorOverviewRuler = {
 const editorWidget = {
   'editorWidget.background': BACKGROUND_WIDGET,
   'editorWidget.border': Colors.schemes[THEME].onSurface,
-  'editorWidget.resizeBorder': PRIMARY_HOVER,
+  'editorWidget.resizeBorder': Colors.schemes[THEME].secondary,
   // Suggest widget falls back to editor widget values which look good.
   'editorSuggestWidget.background': null,
   'editorSuggestWidget.border': null,
