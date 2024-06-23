@@ -1,49 +1,23 @@
 # Switcher Dark
 
-### Git Graph
+A dark theme for Switcher development in VS Code.
 
-```json
-{
-  "git-graph.graphColours": [
-    "#FF428E",
-    "#A8FFEF",
-    "#DFF959",
-    "#F7A409",
-    "#F834BB",
-    "#2BF5E9",
-    "#D831D7",
-    "#FF594C"
-  ]
-}
-```
+## Installation and Usage
 
-### Bracket Pair Colorizer 2
+1. Open the Extensions sidebar in VS Code
+2. Search for Switcher Theme
+3. Click Install
+4. Open the Command Palette with Ctrl + Shift + P or ⇧ + ⌘ + P
+5. Select Preferences: Color Theme and choose Switcher.
 
-If you'd like to add some flair into the editor the Bracket Pair Colorizer
-extension is a nice way to mix in some neon pops.
+## Development
 
-```json
-{
-  "bracket-pair-colorizer-2.colors": ["#DFF959", "#F834BB", "#2BF5E9", "#D831D7"]
-}
-```
+The source code can be found in the [GitHub repository](https://github.com/isfopo/switcher-dark-theme)
 
-### Import Cost
+Install dependencies with `npm install` and run using `npm start`. Run the debugger in VS Code to open a new window with the theme.
 
-Highlight large packages using neon and translucent colors with the Import Cost
-extension.
+## Credits
 
-```json
-{
-  "importCost.smallPackageColor": "#d043cf4d",
-  "importCost.mediumPackageColor": "#d043cf80",
-  "importCost.largePackageColor": "#F834BB"
-}
-```
+Project structure is based on [Radical Theme](https://github.com/DHedgecock/radical-vscode)
 
-Feedback on the theme is very much appreicated 🙌 There are three Github issues
-in the theme repo for providing comments and suggestions directly:
-
-- [Editor colors feedback](https://github.com/DHedgecock/radical-vscode/issues/15)
-- [Syntax token colors feedback](https://github.com/DHedgecock/radical-vscode/issues/17)
-- [Terminal colors feedback](https://github.com/DHedgecock/radical-vscode/issues/16)
+Colors are based on [Switcher Studio](https://www.switcherstudio.com)
