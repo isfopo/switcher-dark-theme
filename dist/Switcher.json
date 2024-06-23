@@ -120,7 +120,7 @@
     "extensionButton.prominentBackground": "#FFB59F",
     "extensionButton.prominentHoverBackground": "#ffc4ad",
     "extensionButton.separator": "#0000",
-    "extensionIcon.verifiedForeground": "#B4FFAB",
+    "extensionIcon.verifiedForeground": "#b4ffabe6",
     "pickerGroup.border": "#0000",
     "pickerGroup.foreground": "#8CCFF1",
     "quickInput.background": "#313539e6",

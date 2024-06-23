@@ -640,7 +640,7 @@ const extension = {
     0.3,
   ),
   'extensionButton.separator': TRANSPARENT,
-  'extensionIcon.verifiedForeground': Colors.schemes[THEME].confirm,
+  'extensionIcon.verifiedForeground': alpha(Colors.schemes[THEME].confirm, 0.9),
 }
 
 //
