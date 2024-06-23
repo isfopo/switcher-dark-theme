@@ -628,9 +628,17 @@ const menuBar = {
 //
 
 const extension = {
-  'extensionButton.prominentForeground': Colors.schemes[THEME].secondary,
-  'extensionButton.prominentBackground': PRIMARY,
-  'extensionButton.prominentHoverBackground': PRIMARY_HOVER,
+  'extensionButton.foreground': Colors.schemes[THEME].onSecondary,
+  'extensionButton.background': Colors.schemes[THEME].secondary,
+  'extensionButton.hoverBackground': brighten(Colors.schemes[THEME].secondary, 0.3),
+  'extensionButton.prominentForeground': Colors.schemes[THEME].onPrimary,
+  'extensionButton.prominentBackground': Colors.schemes[THEME].primary,
+  'extensionButton.prominentHoverBackground': brighten(
+    Colors.schemes[THEME].primary,
+    0.3,
+  ),
+  'extensionButton.separator': TRANSPARENT,
+  'extensionIcon.verifiedForeground': Colors.schemes[THEME].confirm,
 }
 
 //
