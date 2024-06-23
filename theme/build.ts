@@ -23,7 +23,6 @@ const theme = {
     ...tokenColors,
     ...comment,
     ...extensions,
-    // ...go,
     ...html,
     ...javascript,
     ...json,

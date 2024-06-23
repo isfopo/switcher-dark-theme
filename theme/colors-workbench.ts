@@ -787,12 +787,21 @@ const terminal = {
 
 const gitLens = {
   'gitlens.trailingLineBackgroundColor': null,
-  'gitlens.trailingLineForegroundColor': '#F425FC59', // 35%
-  'gitlens.lineHighlightBackgroundColor': '#F425FC26', // 20%
-  'gitlens.lineHighlightOverviewRulerColor': '#F425FC80', // 50%
+  'gitlens.trailingLineForegroundColor': alpha(
+    Colors.schemes[THEME].onSurface,
+    transparency.INACTIVE,
+  ),
+  'gitlens.lineHighlightBackgroundColor': alpha(
+    Colors.schemes[THEME].primary,
+    transparency.BACKGROUND,
+  ),
+  'gitlens.lineHighlightOverviewRulerColor': alpha(
+    Colors.schemes[THEME].primary,
+    transparency.BACKGROUND,
+  ),
   'gitlens.gutterBackgroundColor': PRIMARY_BACKGROUND,
-  'gitlens.gutterForegroundColor': '#c6d2d1',
-  'gitlens.gutterUncommittedForegroundColor': '#85a5a0',
+  'gitlens.gutterForegroundColor': Colors.schemes[THEME].onSurfaceVariant,
+  'gitlens.gutterUncommittedForegroundColor': Colors.schemes[THEME].onSecondaryContainer,
 }
 
 export const workbenchColors = {

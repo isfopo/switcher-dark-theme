@@ -9,7 +9,7 @@
     "activityBar.foreground": "#8CCFF1",
     "activityBar.dropBackground": "#ffb59f80",
     "activityBar.border": "#0000",
-    "activityBar.inactiveForeground": "#8ccff199",
+    "activityBar.inactiveForeground": "#8ccff14d",
     "activityBar.activeBorder": "#8CCFF1",
     "activityBarBadge.background": "#C0E8FF",
     "activityBarBadge.foreground": "#004D66",
@@ -42,7 +42,7 @@
     "dropdown.border": "#0000",
     "editor.background": "#262B2E",
     "editor.foreground": "#DFE3E7",
-    "editorLineNumber.foreground": "#dfe3e799",
+    "editorLineNumber.foreground": "#dfe3e74d",
     "editorLineNumber.activeForeground": "#FFDBD0",
     "editor.lineHighlightBackground": "#80d4d712",
     "editor.lineHighlightBorder": "#0000",
@@ -93,7 +93,7 @@
     "editorBracketHighlight.foreground2": "#C0E8FF",
     "editorBracketHighlight.foreground3": "#9CF1F3",
     "editorBracketHighlight.foreground4": "#F37022",
-    "editorBracketMatch.background": "#004d6699",
+    "editorBracketMatch.background": "#004d664d",
     "editorBracketMatch.border": "#0000",
     "editorOverviewRuler.border": "#0000",
     "editorOverviewRuler.errorForeground": "#93000A",
@@ -169,7 +169,7 @@
     "panel.dropBackground": "#8CCFF1",
     "panelTitle.activeBorder": "#8ccff180",
     "panelTitle.activeForeground": "#DFE3E7",
-    "panelTitle.inactiveForeground": "#dfe3e799",
+    "panelTitle.inactiveForeground": "#dfe3e74d",
     "peekView.border": "#561F0E",
     "peekViewEditor.background": "#1B2023",
     "peekViewEditorGutter.background": "#1B2023",
@@ -244,12 +244,12 @@
     "breadcrumb.focusForeground": "#DFE3E7",
     "breadcrumb.activeSelectionForeground": "#DFE3E7",
     "breadcrumbPicker.background": "#262B2E",
-    "gitlens.trailingLineForegroundColor": "#F425FC59",
-    "gitlens.lineHighlightBackgroundColor": "#F425FC26",
-    "gitlens.lineHighlightOverviewRulerColor": "#F425FC80",
+    "gitlens.trailingLineForegroundColor": "#dfe3e74d",
+    "gitlens.lineHighlightBackgroundColor": "#ffb59f1a",
+    "gitlens.lineHighlightOverviewRulerColor": "#ffb59f1a",
     "gitlens.gutterBackgroundColor": "#262B2E",
-    "gitlens.gutterForegroundColor": "#c6d2d1",
-    "gitlens.gutterUncommittedForegroundColor": "#85a5a0",
+    "gitlens.gutterForegroundColor": "#BFC8CC",
+    "gitlens.gutterUncommittedForegroundColor": "#C0E8FF",
     "terminal.background": "#262B2E",
     "terminal.foreground": "#DFE3E7",
     "terminal.border": "#0000",
@@ -481,7 +481,7 @@
     {
       "scope": "source.json punctuation.separator, source.json punctuation.definition.dictionary, source.json punctuation.definition.array",
       "settings": {
-        "foreground": "#ffb59f99"
+        "foreground": "#ffb59f4d"
       }
     },
     {

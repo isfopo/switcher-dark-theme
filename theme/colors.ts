@@ -9,7 +9,7 @@ export const transparency = {
   DISABLED: 0.5,
   BACKGROUND: 0.1,
   BACKGROUND_HOVER: 0.2,
-  INACTIVE: 0.6,
+  INACTIVE: 0.3,
   GUIDES: 0.5,
   TEXT: 0.4,
 }
