@@ -490,9 +490,9 @@ const minimap = {
 //
 
 const peekView = {
-  'peekView.border': Colors.schemes[THEME].onPrimary,
+  'peekView.border': Colors.schemes[THEME].tertiary,
   'peekViewEditor.background': Colors.schemes[THEME].surfaceContainer,
-  'peekViewEditorGutter.background': Colors.schemes[THEME].surfaceContainer,
+  'peekViewEditorGutter.background': Colors.schemes[THEME].surfaceContainerLow,
   'peekViewEditor.matchHighlightBackground': alpha(Colors.schemes[THEME].onPrimary, 0.15),
   'peekViewEditor.matchHighlightBorder': TRANSPARENT,
   'peekViewResult.background': Colors.schemes[THEME].surfaceContainer,
