@@ -394,6 +394,38 @@
       }
     },
     {
+      "scope": "entity.name.type.cs",
+      "settings": {
+        "foreground": "#8CCFF1",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "storage.modifier.public.cs",
+      "settings": {
+        "foreground": "#FFB59F"
+      }
+    },
+    {
+      "scope": "variable.other.object.property.cs",
+      "settings": {
+        "foreground": "#FFB59F"
+      }
+    },
+    {
+      "scope": "entity.name.type.cs",
+      "settings": {
+        "foreground": "#FFB59F"
+      }
+    },
+    {
+      "scope": "variable.language.this.cs",
+      "settings": {
+        "foreground": "#8CCFF1",
+        "fontStyle": "italic"
+      }
+    },
+    {
       "scope": "punctuation.separator.key-value.html",
       "settings": {
         "foreground": "#8CCFF1"

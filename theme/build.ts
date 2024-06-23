@@ -4,6 +4,7 @@ import path from 'node:path'
 import { tokenColors } from './colors-tokens'
 import { workbenchColors } from './colors-workbench'
 import { comment } from './languages/comment'
+import { csharp } from './languages/csharp'
 import { extensions } from './languages/extensions'
 import { html } from './languages/html'
 import { javascript } from './languages/javascript'
@@ -23,6 +24,7 @@ const theme = {
   tokenColors: [
     ...tokenColors,
     ...comment,
+    ...csharp,
     ...extensions,
     ...html,
     ...javascript,
