@@ -600,6 +600,40 @@
       }
     },
     {
+      "scope": "keyword.control.import.python",
+      "settings": {
+        "foreground": "#FFB59F"
+      }
+    },
+    {
+      "scope": "variable.language.special.self.python",
+      "settings": {
+        "foreground": "#8CCFF1",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "variable.parameter.function.language.special.self.python",
+      "settings": {
+        "foreground": "#8CCFF1",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "meta.attribute.python",
+      "settings": {
+        "foreground": "#FFB59F",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "entity.name.type.class.python",
+      "settings": {
+        "foreground": "#FFB59F",
+        "fontStyle": "bold"
+      }
+    },
+    {
       "scope": "support.class.component",
       "settings": {
         "foreground": "#FFDBD0",

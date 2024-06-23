@@ -9,6 +9,7 @@ import { html } from './languages/html'
 import { javascript } from './languages/javascript'
 import { json } from './languages/json'
 import { markdown } from './languages/markdown'
+import { python } from './languages/python'
 import { react } from './languages/react'
 import { yaml } from './languages/yaml'
 
@@ -27,6 +28,7 @@ const theme = {
     ...javascript,
     ...json,
     ...markdown,
+    ...python,
     ...react,
     ...yaml,
   ],
