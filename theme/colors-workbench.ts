@@ -87,7 +87,7 @@ const base = {
   focusBorder: TRANSPARENT, // Default to not showing focus borders
   foreground: Colors.schemes[THEME].onSurface,
   disabledForeground: alpha(Colors.schemes[THEME].onSurface, transparency.DISABLED),
-  // Background for text selection inside of inputs and textareas
+  // Background for text selection inside of inputs and text areas
   // (Type into the find input and then select some text)
   'selection.background': alpha(Colors.schemes[THEME].primary, transparency.BACKGROUND),
   'icon.foreground': Colors.schemes[THEME].onSurface,
@@ -341,7 +341,7 @@ const editor = {
   // symbol (although this seems to be mistakenly removed when keyboard is
   // used inside word).
   // nb: highlight is with opacity, this highlight shows up fairly often for
-  // mouse users and overlays the other highights. Stronger theming adds a lot
+  // mouse users and overlays the other highlights. Stronger theming adds a lot
   // of noise to the editor (overlays current line, current selection and find
   // highlights)
   'editor.wordHighlightBackground': alpha(HIGHLIGHT_READ_ACCESS, 0.05),
@@ -677,9 +677,9 @@ const gitDecoration = {
 const diffEditor = {
   // nb: diff borders get added to every line and are too noisy
   'diffEditor.insertedTextBackground': alpha(DIFF_ADDED, 0.09),
-  'diffEditor.insertedTextBorder': null, // ETOOMUCHBORDER
+  'diffEditor.insertedTextBorder': null,
   'diffEditor.removedTextBackground': alpha(DIFF_REMOVED, 0.09),
-  'diffEditor.removedTextBorder': null, // ETOOMUCHBORDER
+  'diffEditor.removedTextBorder': null,
   'diffEditor.border': BORDERS,
 }
 
@@ -746,7 +746,7 @@ const breadcrumbs = {
   // After a focused breadcrumb has been opened to show the picker, it is active
   // and this will apply
   'breadcrumb.activeSelectionForeground': Colors.schemes[THEME].onSurface,
-  // Dropdown triggered when you click a breadcrum
+  // Dropdown triggered when you click a breadcrumb
   'breadcrumbPicker.background': Colors.schemes[THEME].surfaceContainerHigh,
 }
 
