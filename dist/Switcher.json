@@ -406,19 +406,14 @@
       }
     },
     {
+      "scope": "entity.name.type.class.cs",
+      "settings": {
+        "foreground": "#8CCFF1",
+        "fontStyle": "bold"
+      }
+    },
+    {
       "scope": "storage.modifier.public.cs",
-      "settings": {
-        "foreground": "#FFB59F"
-      }
-    },
-    {
-      "scope": "variable.other.object.property.cs",
-      "settings": {
-        "foreground": "#FFB59F"
-      }
-    },
-    {
-      "scope": "entity.name.type.cs",
       "settings": {
         "foreground": "#FFB59F"
       }
@@ -428,6 +423,12 @@
       "settings": {
         "foreground": "#8CCFF1",
         "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "variable.other.object.property.cs",
+      "settings": {
+        "foreground": "#FFB59F"
       }
     },
     {
