@@ -477,7 +477,10 @@ const editorWidget = {
 
 // Minimap
 const minimap = {
-  // 'minimap.background': PRIMARY_BACKGROUND,
+  'minimap.background': alpha(
+    Colors.schemes[THEME].surfaceContainerLow,
+    transparency.SHADOW,
+  ),
   'minimap.findMatchHighlight': alpha(HIGHLIGHT_MATCH, 0.75),
   'minimapGutter.addedBackground': GIT_ADDED,
   'minimapGutter.modifiedBackground': GIT_MODIFIED,

@@ -108,6 +108,7 @@
     "editorMarkerNavigationError.background": "#FFB4AB",
     "editorMarkerNavigationWarning.background": "#FFDAD6",
     "editorMarkerNavigationInfo.background": "#80D4D7",
+    "minimap.background": "#171c1f80",
     "minimap.findMatchHighlight": "#80d4d7bf",
     "minimapGutter.addedBackground": "#B4FFAB",
     "minimapGutter.modifiedBackground": "#C0E8FF",
