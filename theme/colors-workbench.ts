@@ -52,9 +52,9 @@ const HIGHLIGHT_WRITE_ACCESS = Colors.schemes[THEME].tertiary
 
 const DIFF_ADDED = Colors.schemes[THEME].confirm
 const DIFF_REMOVED = Colors.schemes[THEME].error
-const MERGE_CURRENT = '#ffffff'
-const MERGE_INCOMING = '#ffffff'
-const MERGE_COMMON = '#ffffff'
+const MERGE_CURRENT = Colors.schemes[THEME].primary
+const MERGE_INCOMING = Colors.schemes[THEME].secondary
+const MERGE_COMMON = Colors.schemes[THEME].tertiary
 
 const GIT_ADDED = Colors.schemes[THEME].confirm
 const GIT_MODIFIED = Colors.schemes[THEME].onSecondaryContainer
@@ -62,13 +62,13 @@ const GIT_DELETED = Colors.schemes[THEME].error
 const GIT_UNTRACKED = alpha(Colors.schemes[THEME].onSurface, transparency.DISABLED)
 const GIT_IGNORED = alpha(Colors.schemes[THEME].onSurface, transparency.DISABLED)
 const GIT_CONFLICTING = Colors.schemes[THEME].error
-const GIT_SUBMODULE = '#ffffff'
+const GIT_SUBMODULE = Colors.schemes[THEME].tertiary
 
 // --- Status colors
 
 const INFO = Colors.schemes[THEME].tertiary
-const WARNING = Colors.schemes[THEME].error
-const ERROR = Colors.schemes[THEME].errorContainer
+const WARNING = Colors.schemes[THEME].onErrorContainer
+const ERROR = Colors.schemes[THEME].error
 
 //
 // High contrast
@@ -708,7 +708,8 @@ const debug = {
   // --- Debug exception widget
   // Shows when connected to a debug session and an exception is encounered
   'debugExceptionWidget.background': alpha(GIT_CONFLICTING, 0.45), // #ff428a73
-  'debugExceptionWidget.border': ERROR,
+  'debugExceptionWidget.border': Colors.schemes[THEME].error,
+  'debugIcon.breakpointForeground': Colors.schemes[THEME].error,
 }
 
 //
