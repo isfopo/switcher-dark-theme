@@ -30,7 +30,7 @@ const PRIMARY = Colors.schemes[THEME].primary
 const PRIMARY_BACKGROUND = Colors.schemes[THEME].surfaceContainerHigh
 
 // Semi-transparent widget background
-const BACKGROUND_WIDGET = alpha(PRIMARY_BACKGROUND, 0.9)
+const BACKGROUND_WIDGET = alpha(Colors.schemes[THEME].surfaceContainerHighest, 0.9)
 // Drag and drop background for theme, used primarily in list views
 const BACKGROUND_DRAG_DROP = alpha(Colors.schemes[THEME].surfaceTint, transparency.DROP)
 
@@ -457,7 +457,7 @@ const editorOverviewRuler = {
 // Editor widgets
 const editorWidget = {
   'editorWidget.background': BACKGROUND_WIDGET,
-  'editorWidget.border': Colors.schemes[THEME].onSurface,
+  'editorWidget.border': alpha(Colors.schemes[THEME].onSurface, transparency.BORDER),
   'editorWidget.resizeBorder': Colors.schemes[THEME].secondary,
   // Suggest widget falls back to editor widget values which look good.
   'editorSuggestWidget.background': null,
