@@ -3,10 +3,10 @@ import { token } from '../utils'
 
 export const yaml = [
   // Property keys
-  token('entity.name.tag.yaml', Colors.schemes[THEME].onPrimaryContainer),
+  token('entity.name.tag.yaml', Colors.schemes[THEME].primary, 'bold'),
 
   // Property values (sting and unquoted)
-  token('source.yaml string', Colors.schemes[THEME].onSecondaryContainer),
+  token('source.yaml string', Colors.schemes[THEME].secondary),
 
   // Punctuation (sequence -> yaml arrays)
   token(

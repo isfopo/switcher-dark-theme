@@ -465,13 +465,13 @@
       "scope": "support.type.property-name.json",
       "settings": {
         "foreground": "#FFB59F",
-        "fontStyle": ""
+        "fontStyle": "bold"
       }
     },
     {
       "scope": "source.json string",
       "settings": {
-        "foreground": "#FFDBD0"
+        "foreground": "#8CCFF1"
       }
     },
     {
@@ -685,13 +685,14 @@
     {
       "scope": "entity.name.tag.yaml",
       "settings": {
-        "foreground": "#FFDBD0"
+        "foreground": "#FFB59F",
+        "fontStyle": "bold"
       }
     },
     {
       "scope": "source.yaml string",
       "settings": {
-        "foreground": "#C0E8FF"
+        "foreground": "#8CCFF1"
       }
     },
     {
