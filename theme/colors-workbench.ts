@@ -24,7 +24,6 @@ import { TRANSPARENT, alpha, brighten } from './utils'
 // --- Theme colors
 
 const PRIMARY = Colors.schemes[THEME].primary
-const PRIMARY_HOVER = Colors.schemes[THEME].primaryFixedDim
 
 // --- Backgrounds
 
