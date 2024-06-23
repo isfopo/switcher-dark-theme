@@ -713,9 +713,12 @@ const debug = {
   'editor.focusedStackFrameHighlightBackground': alpha(HIGHLIGHT_WRITE_ACCESS, 0.1),
 
   // --- Debug exception widget
-  // Shows when connected to a debug session and an exception is encounered
-  'debugExceptionWidget.background': alpha(GIT_CONFLICTING, 0.45), // #ff428a73
-  'debugExceptionWidget.border': Colors.schemes[THEME].error,
+  // Shows when connected to a debug session and an exception is encountered
+  'debugExceptionWidget.background': alpha(
+    Colors.schemes[THEME].error,
+    transparency.BACKGROUND,
+  ),
+  'debugExceptionWidget.border': TRANSPARENT,
   'debugIcon.breakpointForeground': Colors.schemes[THEME].error,
 }
 
