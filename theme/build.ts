@@ -5,7 +5,6 @@ import { tokenColors } from './colors-tokens'
 import { workbenchColors } from './colors-workbench'
 import { comment } from './languages/comment'
 import { csharp } from './languages/csharp'
-import { extensions } from './languages/extensions'
 import { html } from './languages/html'
 import { javascript } from './languages/javascript'
 import { json } from './languages/json'
@@ -25,7 +24,6 @@ const theme = {
     ...tokenColors,
     ...comment,
     ...csharp,
-    ...extensions,
     ...html,
     ...javascript,
     ...json,
