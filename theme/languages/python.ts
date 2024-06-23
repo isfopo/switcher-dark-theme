@@ -22,7 +22,13 @@ export const python = [
     'italic',
   ),
 
+  token('keyword.control.flow.python', Colors.schemes[THEME].tertiary, ''),
+
   token('meta.attribute.python', Colors.schemes[THEME].primary, 'italic'),
 
+  token('support.type.exception.python', Colors.schemes[THEME].error, 'bold'),
+
   token('entity.name.type.class.python', Colors.schemes[THEME].primary, 'bold'),
+
+  token('constant.other.caps.python', Colors.schemes[THEME].tertiary, 'bold'),
 ]

@@ -620,6 +620,13 @@
       }
     },
     {
+      "scope": "keyword.control.flow.python",
+      "settings": {
+        "foreground": "#80D4D7",
+        "fontStyle": ""
+      }
+    },
+    {
       "scope": "meta.attribute.python",
       "settings": {
         "foreground": "#FFB59F",
@@ -627,9 +634,23 @@
       }
     },
     {
+      "scope": "support.type.exception.python",
+      "settings": {
+        "foreground": "#FFB4AB",
+        "fontStyle": "bold"
+      }
+    },
+    {
       "scope": "entity.name.type.class.python",
       "settings": {
         "foreground": "#FFB59F",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "constant.other.caps.python",
+      "settings": {
+        "foreground": "#80D4D7",
         "fontStyle": "bold"
       }
     },
