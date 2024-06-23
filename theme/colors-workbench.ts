@@ -272,7 +272,6 @@ const tab = {
   'tab.hoverBackground': Colors.schemes[THEME].surfaceContainerHighest,
   'tab.hoverForeground': Colors.schemes[THEME].onSurfaceVariant,
   // --- Unfocused editor group tabs
-  // default styles slightly darken tab colors and look good 👍
   'tab.unfocusedActiveBorder': null,
   'tab.unfocusedActiveBorderTop': null,
   'tab.unfocusedActiveForeground': null,
