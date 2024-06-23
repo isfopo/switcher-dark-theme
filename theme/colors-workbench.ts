@@ -262,7 +262,7 @@ const tab = {
   // Border is *between* tabs, set to background so there isn't a border
   'tab.border': TRANSPARENT,
   'tab.activeBorder': TRANSPARENT,
-  'tab.activeBorderTop': TRANSPARENT,
+  'tab.activeBorderTop': Colors.schemes[THEME].primary,
   'tab.activeBackground': Colors.schemes[THEME].surfaceContainerHigh,
   'tab.activeForeground': Colors.schemes[THEME].onSurface,
   'tab.inactiveBackground': Colors.schemes[THEME].surfaceContainer,
@@ -577,7 +577,7 @@ const sideBar = {
 const statusBar = {
   'statusBar.background': Colors.schemes[THEME].surfaceContainerLow,
   'statusBar.foreground': Colors.schemes[THEME].onSecondaryContainer,
-  'statusBar.border': BORDERS,
+  'statusBar.border': TRANSPARENT,
   // DEBUGGING MODE
   'statusBar.debuggingBackground': Colors.schemes[THEME].secondary,
   'statusBar.debuggingForeground': Colors.schemes[THEME].onSecondary,
@@ -602,8 +602,8 @@ const statusBar = {
 
 // Bar at top of application with title of project
 const titleBar = {
-  'titleBar.activeBackground': Colors.schemes[THEME].secondary,
-  'titleBar.activeForeground': Colors.schemes[THEME].onSecondary,
+  'titleBar.activeBackground': Colors.schemes[THEME].surfaceContainerLow,
+  'titleBar.activeForeground': Colors.schemes[THEME].onSurface,
   'titleBar.border': TRANSPARENT,
   // Title bar is slightly darkened on blur by default and looks good
   'titleBar.inactiveBackground': Colors.schemes[THEME].surfaceContainerLow,
