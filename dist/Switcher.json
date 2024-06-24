@@ -342,6 +342,12 @@
       }
     },
     {
+      "scope": "variable.other.constant",
+      "settings": {
+        "foreground": "#80D4D7"
+      }
+    },
+    {
       "scope": "support.type",
       "settings": {
         "foreground": "#FFB59F"

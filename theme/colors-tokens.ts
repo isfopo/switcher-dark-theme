@@ -27,6 +27,7 @@ export const tokenColors = [
   // Support is meant to be things provided by external frameworks or libraries
   token('support', Colors.schemes[THEME].onSurface),
   token('variable', Colors.schemes[THEME].onPrimaryContainer, 'bold'),
+  token('variable.other.constant', Colors.schemes[THEME].tertiary),
 
   // --- TYPES
   {
