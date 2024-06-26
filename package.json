@@ -35,7 +35,7 @@
   },
   "scripts": {
     "start": "onchange \"theme/**/*.ts\" -- ts-node ./theme/build.ts",
-    "build": "ts-node ./theme/build.ts",
+    "build": "ts-node ./theme/build.ts && vsce package",
     "format": "prettier --write *.md theme",
     "lint": "NODE_ENV=test eslint theme"
   },
