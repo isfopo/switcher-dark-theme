@@ -27,6 +27,10 @@ The source code can be found in the [GitHub repository](https://github.com/isfop
 
 Install dependencies with `npm install` and run using `npm start`. Run the debugger in VS Code to open a new window with the theme.
 
+### Building
+
+You will need to install the [vsce](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) package to build the extension. Install with `npm install -g @vscode/vsce`. Once installed, run `npm run build` to build the extension.
+
 ## Credits
 
 Project structure is based on [Radical Theme](https://github.com/DHedgecock/radical-vscode)
