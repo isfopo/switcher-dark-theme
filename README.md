@@ -21,6 +21,13 @@ A dark theme for Switcher development in VS Code.
 6. Open the Command Palette with Ctrl + Shift + P or ⇧ + ⌘ + P
 7. Select Preferences: Color Theme and choose Switcher.
 
+or from the command line:
+
+1. Clone the repository
+2. Run `code --install-extension switcher-dark-theme.vsix-0.0.6`
+3. Open the Command Palette with Ctrl + Shift + P or ⇧ + ⌘ + P
+4. Select Preferences: Color Theme and choose Switcher.
+
 ## Development
 
 The source code can be found in the [GitHub repository](https://github.com/isfopo/switcher-dark-theme)
